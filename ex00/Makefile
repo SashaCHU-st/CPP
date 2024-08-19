@@ -1,7 +1,7 @@
 NAME = megaphone
 FLAGS = -Wall -Wextra -Werror
 
-SRCS = megaphone.cpp
+SRCS = Megaphone.cpp
 
 
 
