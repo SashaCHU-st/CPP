@@ -133,6 +133,8 @@ class PhoneBook
 					<< "|" << endl;
 			}
 		}
+		PhoneBook();
+		~PhoneBook();
 };
 
 int is_digits(string& str)
