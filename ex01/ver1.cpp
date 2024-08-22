@@ -79,7 +79,7 @@ class PhoneBook
 	private:
 		static const unsigned maxContacts = 8;
 		Contact contacts[maxContacts];
-		unsigned index = 0;  // Initialize index to 0
+		unsigned index = 0;
 	public:
 		void createContact(Contact contact)
 		{
@@ -89,30 +89,9 @@ class PhoneBook
 			}
 			else
 			{
-				cout << "PhoneBook is full, replacing oldest contact." << endl;
-				contacts[index % maxContacts] = contact;
+				cout << "PhoneBook is full" << endl;
+				contacts[index - 1] = contact;
 				index++;
-			}
-		}
-
-		void displayContacts()
-		{
-			unsigned count;
-
-			if (index < maxContacts)
-			{
-				count = index;
-			}
-			else
-			{
-				count = maxContacts;
-			}
-
-			for (unsigned i = 0; i < count; i++)
-			{
-				cout << "Contact " << i + 1 << "| " << contacts[i].get_fn() << " "
-				     << contacts[i].get_ln() << "| " << contacts[i].get_nn() << "| "
-				     << contacts[i].get_pn() << "| " << contacts[i].get_ds() << endl;
 			}
 		}
 };
@@ -162,7 +141,7 @@ int main()
 		}
 		else if (input == "SEARCH" || input == "search" || input == "Search")
 		{
-			phonebook.displayContacts();
+			//phonebook.displayContacts();
 		}
 		else if (input == "EXIT" || input == "exit" || input == "Exit")
 		{
