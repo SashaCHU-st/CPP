@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 10:31:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/23 10:54:15 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/23 15:19:36 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,47 +20,38 @@ class Zombie
 	private:
 		string name;
 	public:
-		Zombie(string name): name(name) {}
-		~Zombie() { cout<< "\n"<<this->name << " Zombie destroyed "; }
+		Zombie(){cout <<this->name <<  " Zombie Born" << endl;}
+		Zombie(string name){this->name = name;}
+		void set_name(string name) {this->name = name;}
 		void announce(void);
+		~Zombie() { cout<<this->name << " Zombie destroyed"<< endl; }
 };
-
-void randomChump( std::string name )
-{
-	Zombie new_zombie(name);
-	new_zombie.announce();
-}
-
-// Zombie* newZombie(std::string p_name)
-// {
-// 	Zombie* name = new Zombie(p_name);
-// 	return(name);
-// }
 
 void Zombie::announce(void)
 {
-	cout << this->name <<"BraiiiiiiinnnzzzZ..." << endl;
+	cout << this->name <<" says BraiiiiiiinnnzzzZ..." << endl;
 }
 Zombie* zombieHorde( int N, std::string p_name )
 {
-	Zombie* name = new Zombie(p_name);
+	Zombie* name = new Zombie[N];
+	for(int i = 0; i < N; i++)
+	{
+		name[i].set_name(p_name);
+	}
 	return(name);
 }
 
-int main(int argc, char **argv)
+int main(void)
 {
 	int N = 5;
-	Zombie zombie("first ");/// creating object and giving anme how is it
-	zombie.announce(); // just name it
-
+	string name = "kuku";
+	Zombie* nZombie;
+	nZombie = zombieHorde(N, name); /// calling function that creates on heap
 	for(int i = 0; i < N; i++)
 	{
-		cout << "\n"<< " index "<< i ; 
-		Zombie* nZombie = zombieHorde(N," on heap "); /// calling function that creates on heap
-		nZombie->announce();// heap zombie tells his name
-		delete nZombie;
+		nZombie[i].announce();// heap zombie tells his name
 	}
-	randomChump("third "); // creating new zombie and announcing them 
+	delete[] nZombie;
 
 	return(0);
 }
