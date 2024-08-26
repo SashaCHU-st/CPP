@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   create.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:15:26 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 14:12:53 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/26 14:02:00 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/26 14:13:10 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
-
-# include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-using namespace std;
-
-class PhoneBook
+# include "own.hpp"
+void PhoneBook:: createContact(Contact contact)
 {
-	private:
-		static const unsigned maxContacts = 8;
-		Contact contacts[maxContacts];
-		unsigned index = 1;
-	public:
-		void createContact(Contact contact);
-		void displayContacts(unsigned i);
-		void displayAllContacts();
-};
-
-#endif
+	if (index < maxContacts)
+		contacts[index++] = contact;
+	else
+	{
+		cout << "PhoneBook is full, replacing the last one" << endl;
+		contacts[index - 1] = contact;
+		index++;
+	}
+}

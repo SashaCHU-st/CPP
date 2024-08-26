@@ -1,5 +1,5 @@
 NAME = megaphone
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++11
 
 SRCS = Megaphone.cpp
 

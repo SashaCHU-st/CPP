@@ -1,7 +1,11 @@
 NAME = zombie
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++11
 
-SRCS = 
+SRCS = main.cpp \
+		announce.cpp \
+		zombieHorde.cpp \
+		
+
 
 
 
@@ -12,10 +16,10 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	c++98 $(FLAGS) $(OBJS) -o $(NAME)
+	c++ $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c
-	c++98 $(FLAGS) -c $< -o $@
+	c++ $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
