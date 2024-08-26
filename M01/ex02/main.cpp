@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 10:31:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/23 17:12:52 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/26 08:44:07 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ using namespace std;
 int main(void)
 {
 	string str =  "HI THIS IS BRAIN";
-	string* stringPTR = &str;
+	string *stringPTR = &str;
 	string &stringREF = str;
-	
 
 	//The memory address of the string variable.
 	cout << "• The memory address of the string variable " << &str << endl;

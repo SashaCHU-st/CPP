@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 13:00:55 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/21 14:29:57 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:11:05 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Contact
 		string darkestSecret;
 	public:
 ///setters
-
 		void set_fn(string s_firstName)
 		{
 			this->firstName = s_firstName;
@@ -133,8 +132,6 @@ class PhoneBook
 					<< "|" << endl;
 			}
 		}
-		PhoneBook();
-		~PhoneBook();
 };
 
 int is_digits(string& str)
@@ -154,17 +151,45 @@ Contact addingNew()
 	std::string input = "";
 
 	cout << "First name: ";
-	std::getline(std::cin, input);
-	contact.set_fn(input);
+	while(1)
+	{
+		std::getline(std::cin, input);
+		if(input != "")
+		{
+			contact.set_fn(input);
+			break;
+		}
+		else
+			cout << "Try again please: " << endl;
+	}
+	
 
 	cout << "Last name: ";
-	std::getline(std::cin, input);
-	contact.set_ln(input);
-
+	while(1)
+	{
+		std::getline(std::cin, input);
+		if(input != "")
+		{
+			contact.set_ln(input);
+			break;
+		}
+		else
+			cout << "Try again please: " << endl;
+	}
+	
 	cout << "Nickname: ";
-	std::getline(std::cin, input);
-	contact.set_nn(input);
-
+	while(1)
+	{
+		std::getline(std::cin, input);
+		if(input != "")
+		{
+			contact.set_nn(input);
+			break;
+		}
+		else
+			cout << "Try again please: " << endl;
+	}
+	
 	cout << "Phone number: ";
 	while(1)
 	{
@@ -178,12 +203,24 @@ Contact addingNew()
 			break ;
 		}
 		else
+		{
 			cout << "Only digit please" << endl;
 			cout << "Try again please: " << endl;
+		}
 	}
+	
 	cout << "Darkest secret: ";
-	std::getline(std::cin, input);
-	contact.set_ds(input);
+	while(1)
+	{
+		std::getline(std::cin, input);
+		if(input != "")
+		{
+			contact.set_ds(input);
+			break;
+		}
+		else
+			cout << "Try again please: " << endl;
+	}
 
 	return(contact);
 }
