@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/27 10:37:43 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 14:22:50 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+#include "own.hpp"
 
-Contact addingNew();
-int is_digits(std::string& str);
+class HumanA
+{
+	private:
+		std::string name;
+		Weapon &weapon;
+	public:
+		HumanA(std::string name, Weapon &weap) :weapon(weap)
+		{
+			this->name = name;
+		};
+		void attack();
+};
+
 
 #endif

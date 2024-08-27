@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/27 10:37:43 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 14:49:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+#include "own.hpp"
 
-Contact addingNew();
-int is_digits(std::string& str);
+class HumanB
+{
+	private:
+		std::string name;
+		Weapon weapon;
+	public:
+		HumanB(std::string name): name(name), weapon()
+		{
+			
+		};
+		void setWeapon(Weapon weapon);
+		void attack();
+
+};
+
 
 #endif

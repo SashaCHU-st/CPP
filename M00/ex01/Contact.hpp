@@ -6,37 +6,33 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:16:49 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 11:18:26 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/27 13:48:36 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-using namespace std;
+#include "own.hpp"
 
 class Contact
 {
 	private:
-		string firstName;
-		string lastName;
-		string nickname;
+		std::string firstName;
+		std::string lastName;
+		std::string nickname;
 		unsigned phoneNumber;
-		string darkestSecret;
+		std::string darkestSecret;
 	public:
-///setters
-		void set_fn(string s_firstName)
+		void set_fn(std::string s_firstName)
 		{
 			this->firstName = s_firstName;
 		}
-		void set_ln(string s_lastName)
+		void set_ln(std::string s_lastName)
 		{
 			this->lastName = s_lastName;
 		}
-		void set_nn(string s_nickName)
+		void set_nn(std::string s_nickName)
 		{
 			this->nickname = s_nickName;
 		}
@@ -44,20 +40,19 @@ class Contact
 		{
 			this->phoneNumber = s_phoneNumber;
 		}
-		void set_ds(string s_darkestSecret)
+		void set_ds(std::string s_darkestSecret)
 		{
 			this->darkestSecret = s_darkestSecret;
 		}
-////getters
-		string get_fn()
+		std::string get_fn()
 		{
 			return(this->firstName);
 		}
-		string get_ln()
+		std::string get_ln()
 		{
 			return(this->lastName);
 		}
-		string get_nn()
+		std::string get_nn()
 		{
 			return(this->nickname);
 		}
@@ -65,7 +60,7 @@ class Contact
 		{
 			return(this->phoneNumber);
 		}
-		string get_ds()
+		std::string get_ds()
 		{
 			return(this->darkestSecret);
 		}

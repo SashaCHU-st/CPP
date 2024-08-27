@@ -1,12 +1,12 @@
-NAME = phonebook
+NAME = violence
 FLAGS = -Wall -Wextra -Werror
 
-SRCS = PhoneBook.cpp \
-		addContact.cpp \
-		create.cpp \
-		dispay.cpp \
-
+SRCS = main.cpp \
+		attack.cpp \
+	
 		
+
+
 
 OBJS := $(SRCS:.cpp=.o)
 

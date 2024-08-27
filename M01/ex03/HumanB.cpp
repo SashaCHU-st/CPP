@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/27 14:29:42 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 14:40:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#include "own.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
 
-Contact addingNew();
-int is_digits(std::string& str);
-
-#endif
+void HumanB:: setWeapon(Weapon weapon)
+{
+	this->weapon = weapon;
+}

@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/26 13:37:06 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 14:27:31 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#include "own.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
-
-Contact addingNew();
-int is_digits(std::string& str);
-
-#endif
+int main()
+{
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
+}

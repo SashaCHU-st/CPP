@@ -6,18 +6,14 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:15:26 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 14:12:53 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/27 13:48:56 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-# include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-using namespace std;
+#include "own.hpp"
 
 class PhoneBook
 {

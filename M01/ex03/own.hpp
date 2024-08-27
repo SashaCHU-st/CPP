@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/26 13:30:00 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 13:55:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 #include <iostream>
 #include <iomanip>
 #include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+//#include "HumanB.hpp"
 
-Contact addingNew();
-int is_digits(std::string& str);
 
 #endif

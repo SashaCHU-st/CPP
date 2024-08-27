@@ -1,5 +1,5 @@
 NAME = zombie
-FLAGS = -Wall -Wextra -Werror -std=c++11
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
 		announce.cpp \
@@ -8,25 +8,19 @@ SRCS = main.cpp \
 
 
 
-
-OBJS = $(SRCS:.c=.o)
-
+OBJS := $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-
-$(NAME): $(OBJS)
-	c++ $(FLAGS) $(OBJS) -o $(NAME)
-
-%.o: %.c
-	c++ $(FLAGS) -c $< -o $@
+$(NAME): $(SRCS)
+	c++ $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
-
+	
 re: fclean all
 
 .PHONY: clean fclean re

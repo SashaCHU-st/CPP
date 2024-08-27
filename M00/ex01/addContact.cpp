@@ -6,12 +6,12 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:10:12 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 14:13:06 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/27 10:04:27 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "own.hpp"
-int is_digits(string& str)
+int is_digits(std::string& str)
 {
 	for (unsigned i = 0; i < str.length(); ++i)
 	{
@@ -27,7 +27,7 @@ Contact addingNew()
 	Contact contact;
 	std::string input = "";
 
-	cout << "First name: ";
+	std::cout << "First name: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
@@ -37,11 +37,11 @@ Contact addingNew()
 			break;
 		}
 		else
-			cout << "Try again please: " << endl;
+			std::cout << "Try again please: \n";
 	}
 	
 
-	cout << "Last name: ";
+	std::cout << "Last name: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
@@ -51,10 +51,10 @@ Contact addingNew()
 			break;
 		}
 		else
-			cout << "Try again please: " << endl;
+			std::cout << "Try again please:\n";
 	}
 	
-	cout << "Nickname: ";
+	std::cout << "Nickname: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
@@ -64,16 +64,14 @@ Contact addingNew()
 			break;
 		}
 		else
-			cout << "Try again please: " << endl;
+			std::cout << "Try again please: \n";
 	}
 	
-	cout << "Phone number: ";
+	std::cout << "Phone number: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
-		if (input.empty())
-			break ;
-		if(is_digits(input))
+		if(is_digits(input) && input != "")
 		{
 			unsigned number = stoul(input);
 			contact.set_pn(number);
@@ -81,12 +79,12 @@ Contact addingNew()
 		}
 		else
 		{
-			cout << "Only digit please" << endl;
-			cout << "Try again please: " << endl;
+			std::cout << "Only digit please\n";
+			std::cout << "Try again please: \n";
 		}
 	}
 	
-	cout << "Darkest secret: ";
+	std::cout << "Darkest secret: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
@@ -96,7 +94,7 @@ Contact addingNew()
 			break;
 		}
 		else
-			cout << "Try again please: " << endl;
+			std::cout << "Try again please:\n";
 	}
 
 	return(contact);

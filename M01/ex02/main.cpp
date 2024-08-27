@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 10:31:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 08:44:07 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/27 09:52:53 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ int main(void)
 	
 	return(0);
 }
-	//cout << *stringREF << endl;

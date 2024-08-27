@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   attack.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/27 10:42:26 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/27 14:16:39 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#include "own.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+void HumanA :: attack()
+{
+	std:: string weap;
+	weap = weapon.getType();
+	std::cout << this->name << " attacks with their " << weap << std::endl;
+}
 
-Contact addingNew();
-int is_digits(std::string& str);
-
-#endif
