@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 09:59:01 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 15:35:29 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/28 15:34:36 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/28 15:35:11 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-#include <fstream> 
-#include "Replace.hpp"
+#include "own.hpp"
 
 
 #endif
