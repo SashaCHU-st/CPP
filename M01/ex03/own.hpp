@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:30:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 13:55:41 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/28 09:31:44 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <bits/stdc++.h>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
-//#include "HumanB.hpp"
+#include "HumanB.hpp"
 
 
 #endif

@@ -5,29 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 13:37:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 09:29:39 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/28 09:58:42 by aheinane          #+#    #+#             */
+/*   Updated: 2024/08/28 15:32:31 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "own.hpp"
-
-int main()
+int main (int argc, char **argv)
 {
+	if(argc != 2)
 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		std:: cout <<"Usage ./sed <filename> <a> <o>";
+		return(0);
 	}
+	std::string kuku;
+	std::string filename = argv[1];
+	// std::string s1 = argv[2];
+	// std::string s2 = argv[3];
+	std::ifstream input(argv[1]);
+	std::string outfile = filename + ".replace";
+	std::ofstream out(outfile);
+	if(input && out)
 	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		while (getline(input, kuku))
+		{
+			out<< kuku << "\n";
+		}
+		std::cout <<"All good";
 	}
-	return 0;
+	else
+		std::cout<<"Cannot read file"; 
+	if(!out) 
+	{ 
+		std::cout<<"Error in creating file!!!"; 
+		return (0); 
+	}
+	input.close();
+	out.close();
+	return (0); 
 }
