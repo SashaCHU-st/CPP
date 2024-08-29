@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:16:49 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 13:48:36 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/29 12:31:45 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Contact
 		std::string nickname;
 		unsigned phoneNumber;
 		std::string darkestSecret;
+		bool at_least_one;
 	public:
 		void set_fn(std::string s_firstName)
 		{
@@ -44,6 +45,10 @@ class Contact
 		{
 			this->darkestSecret = s_darkestSecret;
 		}
+		void set_at_least_one(unsigned at_least_one)
+		{
+			this->at_least_one = at_least_one;
+		}
 		std::string get_fn()
 		{
 			return(this->firstName);
@@ -63,6 +68,10 @@ class Contact
 		std::string get_ds()
 		{
 			return(this->darkestSecret);
+		}
+		unsigned get_at_least_one()
+		{
+			return(this->at_least_one);
 		}
 };
 

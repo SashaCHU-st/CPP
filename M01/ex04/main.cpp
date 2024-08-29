@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:58:42 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 17:31:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/08/29 10:04:26 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,7 @@ int main (int argc, char *argv[])
 
 	
 	std::string s1 = argv[2];
-	char cs1[s1.length()];
-	strcpy(cs1, s1.c_str());
 	std::string s2 = argv[3];
-	char cs2[s2.length()];
-	strcpy(cs2, s2.c_str());
-	int found = 0;
-	unsigned long offset;
-	std:: string result;
 	
 	std::ifstream input(argv[1]);
 
@@ -38,42 +31,26 @@ int main (int argc, char *argv[])
 	std::ofstream out(outfile);
 	if(input.is_open())
 	{
-		while (!input.eof())
+		while (getline(input, kuku))
 		{
-			getline(input, kuku);
-			if((offset = kuku.find(s1, 0)) != std::string::npos)
-			{
-				std:: cout << "Found" << s1 << std::endl;
-				found = 1;
-			}
-			else 
-				std::cout << "not found";
-			if(found == 1)
-			{
-				for (unsigned long i = 0; i < kuku.length(); i++)
-				{
-					if(input && out)
-					{
-							while (getline(input, kuku))
-							{
-								while (kuku[i] != '\0')
-								{
-									while(kuku[i] == cs1[0])
-									{
-										kuku[i] = cs2[0];
-									}
-									i++;
-								}
-								for (unsigned long j = i; j < kuku.length(); ++j)
-								{
-									result += kuku[j];
-								}
+			std::string result;
+			size_t offset = 0;
+			size_t pos;
 
-								out << result << "\n";
-							}
-					}
+		
+			while ((pos = kuku.find(s1, offset)) != std::string::npos)
+			{
+				for (size_t i = offset; i < pos; ++i) {
+					result += kuku[i];
 				}
+				result += s2;
+				offset = pos + s1.length();
 			}
+			for (size_t i = offset; i < kuku.length(); ++i)
+			{
+				result += kuku[i];
+			}
+			out << result << "\n";
 		}
 	}
 else
