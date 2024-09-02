@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:40:52 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 14:17:34 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/02 18:32:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,8 @@ class Weapon
 		{
 			this->type = type;
 		};
-		void setType(std:: string type)
-		{
-			this->type = type;
-		}
-		std::string getType()
-		{
-			return(this->type);
-		}
+		void setType(std:: string type);
+		std::string getType();
 };
 
 

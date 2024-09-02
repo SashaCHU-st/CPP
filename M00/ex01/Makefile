@@ -5,6 +5,7 @@ SRCS = PhoneBook.cpp \
 		addContact.cpp \
 		create.cpp \
 		dispay.cpp \
+		Contact.cpp \
 
 		
 
