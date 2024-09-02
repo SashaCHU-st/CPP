@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 09:59:01 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 09:49:10 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/29 15:01:06 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/02 15:19:39 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
+#include "own.hpp"
 
-#include <iostream>
-#include <bits/stdc++.h>
-#include <fstream> 
+int main ()
+{
+	Harl harl;
 
-#endif
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("ERRORR");
+	
+	return(0);
+}

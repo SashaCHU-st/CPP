@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:58:42 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/29 10:04:26 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/02 09:43:15 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main (int argc, char *argv[])
 	std::string kuku;
 	std::string filename = argv[1];
 
-	
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	
@@ -38,18 +37,16 @@ int main (int argc, char *argv[])
 			size_t pos;
 
 		
-			while ((pos = kuku.find(s1, offset)) != std::string::npos)
+			while ((pos = kuku.find(s1, offset)) != std::string::npos)// npos means ne naideny, sootvetsveno esli ne ne naideno => naideno
 			{
-				for (size_t i = offset; i < pos; ++i) {
+				for (size_t i = offset; i < pos; ++i)// esli naideno to copiruet ot offset TOLKO do naidenoi posicii
 					result += kuku[i];
-				}
-				result += s2;
-				offset = pos + s1.length();
+				result += s2; // kogda posicc naidena to to znachenie menyet na s2
+				offset = pos + s1.length();// obnovlyaetsy offset, chtoby prodoljit do naidenoi stroki
+				std::cout<<"!!!!"<<offset<<"\n"; 
 			}
-			for (size_t i = offset; i < kuku.length(); ++i)
-			{
+			for (size_t i = offset; i < kuku.length(); ++i) /// dobavlyem vse chto ostalos'
 				result += kuku[i];
-			}
 			out << result << "\n";
 		}
 	}
