@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 14:29:42 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 09:26:47 by aheinane         ###   ########.fr       */
+/*   Created: 2024/09/06 10:36:06 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/06 10:37:30 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "own.hpp"
 
-
-// void HumanB:: setWeapon(Weapon weapon)
-// {
-// 	this->weapon = weapon;
-// }
+HumanB::HumanB(std::string name): name(name), weapon(nullptr)
+{
+};
+void HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon = &weapon;
+};

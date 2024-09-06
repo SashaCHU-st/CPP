@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:59:01 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 13:44:09 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:54:56 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define OWN_HPP
 
 #include <iostream>
-#include <string.h>
 #include "Harl.hpp"
 
 

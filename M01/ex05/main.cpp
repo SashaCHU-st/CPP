@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 15:01:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 15:19:39 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:42:34 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int main ()
 	harl.complain("INFO");
 	harl.complain("WARNING");
 	harl.complain("ERROR");
-	harl.complain("ERRORR");
-	
+
 	return(0);
 }

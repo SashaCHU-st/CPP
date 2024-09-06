@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:30:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 09:31:44 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:38:54 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define OWN_HPP
 
 #include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"

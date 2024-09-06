@@ -6,12 +6,12 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:27:35 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 13:28:07 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:29:29 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "own.hpp"
 void Zombie::announce(void)
 {
-	cout << this->name <<" says BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << this->name <<" says BraiiiiiiinnnzzzZ..." << std::endl;
 }

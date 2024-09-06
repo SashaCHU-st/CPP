@@ -3,8 +3,9 @@ FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
 		attack.cpp \
-		Weapon.cpp
-	
+		Weapon.cpp \
+		HumanA.cpp \
+		HumanB.cpp \
 		
 
 

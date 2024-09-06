@@ -6,24 +6,21 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:41:23 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 11:44:51 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:23:48 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <bits/stdc++.h>
-using namespace std;
+#include "own.hpp"
 class Zombie
 {
 	private:
-		string name;
+		std::string name;
 	public:
-		Zombie(string name): name(name) {}
-		~Zombie() { cout<< "\n"<<this->name << " Zombie destroyed "; }
+		Zombie(std::string name): name(name) {}
+		~Zombie() { std::cout<< "\n"<<this->name << " Zombie destroyed "; }
 		void announce(void);
 };
 

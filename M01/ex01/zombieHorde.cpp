@@ -6,11 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:28:44 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 13:30:47 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:28:49 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+
 #include "own.hpp"
 Zombie* zombieHorde( int N, std::string p_name )
 {

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:58:42 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 09:43:15 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 10:41:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,14 @@ int main (int argc, char *argv[])
 			size_t pos;
 
 		
-			while ((pos = kuku.find(s1, offset)) != std::string::npos)// npos means ne naideny, sootvetsveno esli ne ne naideno => naideno
+			while ((pos = kuku.find(s1, offset)) != std::string::npos)
 			{
-				for (size_t i = offset; i < pos; ++i)// esli naideno to copiruet ot offset TOLKO do naidenoi posicii
+				for (size_t i = offset; i < pos; ++i)
 					result += kuku[i];
-				result += s2; // kogda posicc naidena to to znachenie menyet na s2
-				offset = pos + s1.length();// obnovlyaetsy offset, chtoby prodoljit do naidenoi stroki
-				std::cout<<"!!!!"<<offset<<"\n"; 
+				result += s2;
+				offset = pos + s1.length();
 			}
-			for (size_t i = offset; i < kuku.length(); ++i) /// dobavlyem vse chto ostalos'
+			for (size_t i = offset; i < kuku.length(); ++i)
 				result += kuku[i];
 			out << result << "\n";
 		}

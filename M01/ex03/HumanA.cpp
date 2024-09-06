@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Replace.hpp                                        :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 15:34:36 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 15:35:11 by aheinane         ###   ########.fr       */
+/*   Created: 2024/09/06 10:34:53 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/06 10:35:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-# define REPLACE_HPP
-
 #include "own.hpp"
-
-
-#endif
+HumanA::HumanA(std::string name, Weapon &weap) :weapon(weap)
+{
+	this->name = name;
+};
