@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:15:26 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/29 12:25:33 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 08:51:17 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class PhoneBook
 {
 	private:
-		static const unsigned maxContacts = 8;
+		static const unsigned maxContacts = 9;
 		Contact contacts[maxContacts];
 		unsigned index = 1;
 	public:

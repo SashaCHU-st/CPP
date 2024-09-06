@@ -6,12 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 16:45:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 18:00:14 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 08:46:20 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
 
 int main(int argc, char *argv[])
 {

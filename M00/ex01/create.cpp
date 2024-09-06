@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:02:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/29 12:42:02 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 08:55:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void PhoneBook:: createContact(Contact contact)
 		contacts[index++] = contact;
 	else
 	{
-		std::cout << "PhoneBook is full, replacing the last one\n";
-		contacts[index %8] = contact;
+		std::cout << "PhoneBook is full, replacing the oldest one\n";
+		contacts[index % (maxContacts - 1)] = contact;
 		index++;
 	}
 	at_least_one = true;

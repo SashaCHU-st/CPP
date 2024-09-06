@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:04:56 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/29 12:43:31 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 09:05:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void PhoneBook::  displayContacts(unsigned i)
 		std::string first_name = contacts[i].get_fn();
 		std::string last_name = contacts[i].get_ln();
 		std::string nick_name = contacts[i].get_nn();
-		unsigned phone = contacts[i].get_pn();
+		std::string phone = contacts[i].get_pn();
 		std::string dark = contacts[i].get_ds();
 			std::cout << "Index: "<< i << "\n";
 			std::cout << "First name: " << first_name << "\n";

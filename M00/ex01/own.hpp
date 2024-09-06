@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:35:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/27 10:11:13 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 09:11:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 #include <iostream>
 #include <iomanip>
-#include <bits/stdc++.h>
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
 Contact addingNew();
-int is_digits(std::string& str);
+int is_digits(const std::string& str);
 
 #endif

@@ -6,12 +6,13 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:10:12 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/29 14:33:45 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 09:02:15 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "own.hpp"
-int is_digits(std::string& str)
+
+int is_digits(const std::string& str)
 {
 	for (unsigned i = 0; i < str.length(); ++i)
 	{
@@ -39,7 +40,6 @@ Contact addingNew()
 		else
 			std::cout << "Try again please: \n";
 	}
-	
 
 	std::cout << "Last name: ";
 	while(1)
@@ -53,7 +53,7 @@ Contact addingNew()
 		else
 			std::cout << "Try again please:\n";
 	}
-	
+
 	std::cout << "Nickname: ";
 	while(1)
 	{
@@ -66,24 +66,23 @@ Contact addingNew()
 		else
 			std::cout << "Try again please: \n";
 	}
-	
+
 	std::cout << "Phone number: ";
 	while(1)
 	{
 		std::getline(std::cin, input);
 		if(is_digits(input) && input != "")
 		{
-			unsigned number = stoul(input);
-			contact.set_pn(number);
-			break ;
+			contact.set_pn(input);
+			break;
 		}
 		else
 		{
-			std::cout << "Only digit please\n";
+			std::cout << "Only digits please\n";
 			std::cout << "Try again please: \n";
 		}
 	}
-	
+
 	std::cout << "Darkest secret: ";
 	while(1)
 	{
