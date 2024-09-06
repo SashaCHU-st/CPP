@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:10:12 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 09:02:15 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 14:39:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ Contact addingNew()
 	std::cout << "First name: ";
 	while(1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::getline(std::cin, input);
 		if(input != "")
 		{
@@ -44,6 +46,8 @@ Contact addingNew()
 	std::cout << "Last name: ";
 	while(1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::getline(std::cin, input);
 		if(input != "")
 		{
@@ -57,6 +61,8 @@ Contact addingNew()
 	std::cout << "Nickname: ";
 	while(1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::getline(std::cin, input);
 		if(input != "")
 		{
@@ -70,6 +76,8 @@ Contact addingNew()
 	std::cout << "Phone number: ";
 	while(1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::getline(std::cin, input);
 		if(is_digits(input) && input != "")
 		{
@@ -86,6 +94,8 @@ Contact addingNew()
 	std::cout << "Darkest secret: ";
 	while(1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::getline(std::cin, input);
 		if(input != "")
 		{

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:11:15 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 09:45:10 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 15:12:50 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main()
 
 	while (1)
 	{
+		if (std::cin.eof())
+			break ;
 		std::cout << "Enter command ";
 		std::getline(std::cin, input);
 
@@ -35,6 +37,8 @@ int main()
 				std::cout << "Please write index of contact you want to check: \n";
 				while (1)
 				{
+					if (std::cin.eof())
+						break ;
 					std::getline(std::cin, input);
 					if(is_digits(input) && input != "")
 					{
@@ -47,9 +51,9 @@ int main()
 						std::cout << "Try again please: \n";
 					}
 				}
-				if(number >= 9)
+				if(number >= 9 || number < 1)
 				{
-					std::cout << "Phonebook have only 8 contacts\n";
+					std::cout << "Phonebook have only 8 contacts, and startinf from 1\n";
 				}
 				if(number < 9)
 					phonebook.displayContacts(number);

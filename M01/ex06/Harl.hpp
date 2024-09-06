@@ -6,9 +6,12 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:43:20 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 16:11:14 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/06 11:37:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include "own.hpp"
 class Harl
@@ -22,3 +25,5 @@ class Harl
 	public:
 		void complain(std::string level);
 };
+
+#endif
