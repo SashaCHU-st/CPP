@@ -6,13 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 10:31:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:26:05 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 11:25:29 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
-
-
+#include "Zombie.hpp"
 int main()
 {
 	Zombie zombie("first ");

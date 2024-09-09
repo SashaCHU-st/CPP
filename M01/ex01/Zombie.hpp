@@ -6,14 +6,14 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:24:20 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:28:30 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 12:04:22 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-#include "own.hpp"
+#include <iostream>
 
 class Zombie
 {
@@ -25,5 +25,7 @@ class Zombie
 		void announce(void);
 		~Zombie() { std::cout<<this->name << " Zombie destroyed"<< std::endl; }
 };
+
+Zombie* zombieHorde( int N, std::string p_name );
 
 #endif

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   NewZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:47:51 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:24:26 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/26 11:49:17 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/09 11:25:37 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
-
-#include <iostream>
-# include "Zombie.hpp"
-
-void randomChump( std::string name );
-Zombie* newZombie(std::string p_name);
-
-#endif
+#include "Zombie.hpp"
+Zombie* newZombie(std::string p_name)
+{
+	Zombie* name = new Zombie(p_name);
+	return(name);
+}

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:11:15 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 15:18:54 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 09:32:13 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
 						break ;
 					std::getline(std::cin, input);
 					if(input.length() >1)
-						break;;
+						break;
 					if(is_digits(input) && input != "")
 					{
 						number = stoul(input);
@@ -55,15 +55,15 @@ int main()
 				}
 				if(number)
 				{
-					if(number >= 9 || number < 1)
+					if(number >= 9 )
 					{
-						std::cout << "Phonebook have only 8 contacts, and startinf from 1\n";
+						std::cout << "Phonebook have only 8 contacts, and starting from 1\n";
 					}
 					if(number < 9 )
 						phonebook.displayContacts(number);
 				}
 				else
-					std::cout << "Wrong index\n";
+					std::cout << "Wrong index (the length more then 1 / or less then 1)\n";
 			}
 			else
 				std::cout << "Nothing to display, please add first" << "\n";

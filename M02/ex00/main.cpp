@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:49:17 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 11:49:33 by aheinane         ###   ########.fr       */
+/*   Created: 2024/09/02 17:10:15 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/06 11:37:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "own.hpp"
-Zombie* newZombie(std::string p_name)
+int main ()
 {
-	Zombie* name = new Zombie(p_name);
-	return(name);
+
+	
 }

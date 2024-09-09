@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   announce.cpp                                       :+:      :+:    :+:   */
+/*   Attack.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 13:27:35 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:29:29 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/27 10:42:26 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/09 10:18:48 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
-void Zombie::announce(void)
+#include "Own.hpp"
+
+void HumanA :: attack()
 {
-	std::cout << this->name <<" says BraiiiiiiinnnzzzZ..." << std::endl;
+	std:: string weap;
+	weap = weapon.getType();
+	std::cout << this->name << " attacks with their " << weap << std::endl;
+}
+
+void HumanB :: attack()
+{
+	std:: string weap;
+	weap = weapon->getType();
+	std::cout << this->name << " attacks with their " << weap << std::endl;
 }

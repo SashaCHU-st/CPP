@@ -6,11 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 09:58:42 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:41:16 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 10:19:23 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
+#include "Own.hpp"
 int main (int argc, char *argv[])
 {
 	if(argc != 4)

@@ -6,11 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:15:01 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 17:00:35 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 12:05:56 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
+#include "Harl.hpp"
 
 
 void Harl:: debug( void )

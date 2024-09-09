@@ -1,11 +1,12 @@
-NAME = sed
+NAME = brain
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp
-	
-		
+
+
+
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

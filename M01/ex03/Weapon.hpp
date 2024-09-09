@@ -6,14 +6,14 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:40:52 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/02 18:32:03 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 10:19:19 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
 
-#include "own.hpp"
+#include "Own.hpp"
 
 class Weapon 
 {

@@ -6,11 +6,11 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:37:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/28 09:29:39 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 10:19:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
+#include "Own.hpp"
 
 int main()
 {

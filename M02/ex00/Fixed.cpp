@@ -1,19 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   own.hpp                                            :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 09:59:01 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:56:24 by aheinane         ###   ########.fr       */
+/*   Created: 2024/09/06 11:35:13 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/09 10:20:13 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OWN_HPP
-# define OWN_HPP
-
-#include <iostream>
-#include "Harl.hpp"
-
-#endif
+#include "Own.hpp"

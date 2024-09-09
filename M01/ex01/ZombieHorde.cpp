@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   announce.cpp                                       :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 11:50:49 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:24:13 by aheinane         ###   ########.fr       */
+/*   Created: 2024/08/26 13:28:44 by aheinane          #+#    #+#             */
+/*   Updated: 2024/09/09 12:04:02 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
 
-void Zombie::announce(void)
+# include "Zombie.hpp"
+Zombie* zombieHorde( int N, std::string p_name )
 {
-	std::cout << this->name <<"BraiiiiiiinnnzzzZ..." << std::endl;
+	Zombie* name = new Zombie[N];
+	for(int i = 0; i < N; i++)
+	{
+		name[i].set_name(p_name);
+	}
+	return(name);
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   RandomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:46:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/08/26 11:48:35 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 11:25:22 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "own.hpp"
+#include "Zombie.hpp"
 void randomChump( std::string name )
 {
 	Zombie new_zombie(name);

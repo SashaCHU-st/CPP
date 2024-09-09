@@ -6,14 +6,14 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:37:43 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:35:51 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 10:18:57 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_HPP
 # define HUMANA_HPP
 
-#include "own.hpp"
+#include "Own.hpp"
 
 class HumanA
 {
