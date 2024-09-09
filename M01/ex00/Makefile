@@ -4,9 +4,10 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
-	RandomChump.cpp \
-	NewZombie.cpp \
-	Announce.cpp
+	randomChump.cpp \
+	newZombie.cpp \
+	Announce.cpp \
+	Zombie.cpp
 
 
 

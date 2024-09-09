@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:24:20 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/09 12:04:22 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/09 15:53:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Zombie
 	private:
 		std::string name;
 	public:
-		Zombie(){std::cout <<  " Zombie Born" << std::endl;}
-		void set_name(std::string name) {this->name = name;}
+		Zombie();
+		void set_name(std::string name);
 		void announce(void);
-		~Zombie() { std::cout<<this->name << " Zombie destroyed"<< std::endl; }
+		~Zombie();
 };
 
 Zombie* zombieHorde( int N, std::string p_name );
