@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/11 12:54:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:23:20 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,44 @@ class Fixed
 		//member function
 		float toFloat( void ) const;
 		int toInt( void ) const;
-
+		static const Fixed& min(const Fixed &a, const Fixed &b);
+		static const Fixed& max(const Fixed &a, const Fixed &b);
+		static Fixed& min( Fixed& a, Fixed& b);
+		static Fixed& max( Fixed& a, Fixed& b);
+		
 		//operator
 		Fixed& operator= (const Fixed& op);//assigmnet operator
+		
+		//comparison operators
+		bool operator<(const Fixed& op)const;
+		bool operator>(const Fixed& op)const;
+		bool operator>=(const Fixed& op)const;
+		bool operator<=(const Fixed& op)const;
+		bool operator==(const Fixed& op)const;
+		bool operator!=(const Fixed& op)const;
 
+		// arithmetic operators
+		Fixed operator+(const Fixed& op);
+		Fixed operator-(const Fixed& op);
+		Fixed operator/(const Fixed& op);
+		Fixed operator*(const Fixed& op);
+		
+
+		//Префиксный инкремент (++a) возвращает ссылку на уже увеличенный объект, 
+		//а постфиксный (a++) возвращает копию до изменения
+		
+		//PREincrement/decrement
+		//++a(префиксный инкремент) сначала изменяет объект, а затем возвращает его новое значение,
+		// поэтому используется, когда нужно получить и вывести обновлённое значение.
+		Fixed& operator++();
+		Fixed& operator--();
+
+		//Postincrement/decrement
+		//a++(постфиксный инкремент) возвращает копию объекта до увеличения //
+		//и используется, когда нужно вывести исходное значение до изменения.
+		Fixed operator++(int);
+		Fixed operator--(int);
+		
 		//setter
 		void setRawBits( int const raw );
 

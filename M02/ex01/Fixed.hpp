@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/11 12:54:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:17:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		Fixed();
 		Fixed(const int &a);//A constructor that takes a constant integer as a parameter.
 		Fixed(const float &b);//A constructor that takes a constant floating-point number as a parameter.
-		Fixed(Fixed const &copy);//opeartor copirivaniya
+		Fixed(const Fixed &copy);//opeartor copirivaniya
 		
 		//desructor
 		~Fixed();
