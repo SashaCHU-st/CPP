@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:13 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/11 12:59:08 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:55:26 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,11 @@ Fixed::Fixed(const float &b)//A constructor that takes a constant floating-point
 };
 float Fixed:: toFloat( void ) const
 {
-	return((float)fixed_point /(1 << fract));
+	return(this->getRawBits() /(1 << fract));
 };
 int Fixed::toInt( void ) const
 {
-	return ((int)fixed_point  >> fract);
+	return (this->getRawBits()  >> fract);
 };
 
 std::ostream& operator<<(std::ostream& out, const Fixed& fractPoint)
