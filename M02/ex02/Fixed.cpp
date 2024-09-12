@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:13 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/11 15:25:07 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/12 08:40:13 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,14 +169,16 @@ Fixed	&Fixed ::operator--()
 };
 
 ///Post increment/decrement
-Fixed	Fixed ::operator++(int)
+Fixed Fixed::operator++(int) // Postfix increment
 {
-	--fixed_point;
-	return(*this);
-};
+    Fixed temp = *this;  // sohranyaet current state
+    ++(*this);           // Increment the current 
+    return temp;         // Return that was at the begining
+}
 
-Fixed	Fixed ::operator--(int)
+Fixed Fixed::operator--(int) // Postfix decrement
 {
-	--fixed_point;
-	return(*this);
-};
+    Fixed temp = *this;  // sohranyaet current state
+    --(*this);           // Increment the current 
+    return temp;         // Return the saved state
+}
