@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:06 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/11 13:17:58 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/13 09:44:49 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ class Fixed
 	public:
 		//Constrcutors;
 		Fixed();
-		Fixed(const int &a);//A constructor that takes a constant integer as a parameter.
-		Fixed(const float &b);//A constructor that takes a constant floating-point number as a parameter.
-		Fixed(const Fixed &copy);//opeartor copirivaniya
+		Fixed(const int &a);
+		Fixed(const float &b);
+		Fixed(const Fixed &copy);
 		
 		//desructor
 		~Fixed();
@@ -37,7 +37,7 @@ class Fixed
 		int toInt( void ) const;
 
 		//operator
-		Fixed& operator= (const Fixed& op);//assigmnet operator
+		Fixed& operator= (const Fixed& op); // = default;
 
 		//setter
 		void setRawBits( int const raw );
@@ -46,6 +46,6 @@ class Fixed
 		int getRawBits( void ) const;
 };
 
-std::ostream& operator<<(std::ostream& out, const Fixed& fractPoint);// An overload of the insertion («) operator
+std::ostream& operator<<(std::ostream& out, const Fixed& fractPoint);
 
 #endif

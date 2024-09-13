@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 10:31:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/06 10:31:19 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/12 13:39:57 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ int main(void)
 {
 	std::string str =  "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
+	stringPTR = &u;//now it is pointing to u
 	std::string &stringREF = str;
 
 	std::cout << "• The memory address of the string variable " << &str << std::endl;

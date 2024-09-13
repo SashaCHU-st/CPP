@@ -6,59 +6,52 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:35:13 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/12 08:40:13 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/13 09:52:10 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
-Fixed :: Fixed()
+Fixed::Fixed()
 {
-	//std::cout << "Default constructor called" << std::endl;
 	this->fixed_point = 0;
 };
 
 Fixed::Fixed(const Fixed &op)
 {
-	//std::cout << "Copy constructor called" << std::endl;
 	*this = op;
 }
 
-Fixed::	~Fixed()
-{
-	//std::cout << "Destructor called" << std::endl;
-};
+Fixed::~Fixed(){};
 
-void Fixed :: setRawBits( int const raw )
+void Fixed::setRawBits( int const raw )
 {
 	this->fixed_point = raw;
 };
-int Fixed:: getRawBits( void ) const
+int Fixed::getRawBits( void ) const
 {
-	//std::cout << "getRawBits member function called" << std::endl;
 	return(this->fixed_point);
 };
 
 Fixed	&Fixed ::operator= (const Fixed& op)
 {
-	//std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &op)
 	{
 		fixed_point = op.getRawBits();
 	}
-	return(*this);// protection from selfgiving values to the variables
+	return(*this);
 };
 
-/// diff ex01
-Fixed::Fixed(const int &a)//A constructor that takes a constant integer as a parameter.
+
+
+
+Fixed::Fixed(const int &a)
 {
-	//std::cout << "Int constructor called" << std::endl;
 	this->fixed_point = a << fract;
 };
-Fixed::Fixed(const float &b)//A constructor that takes a constant floating-point number as a parameter.
+Fixed::Fixed(const float &b)
 {
-	//std::cout << "Float constructor called" << std::endl;
 	this->fixed_point = roundf(b*(1 << fract));
 };
 float Fixed:: toFloat( void ) const
@@ -77,8 +70,7 @@ std::ostream& operator<<(std::ostream& out, const Fixed& fractPoint)
 }
 
 // comparision operators
-
-bool	Fixed ::operator<(const Fixed& op)const
+bool	Fixed ::operator<(const Fixed& op) const
 {
 	return(fixed_point<op.fixed_point);
 };
@@ -102,7 +94,10 @@ bool	Fixed ::operator!=(const Fixed& op)const
 {
 	return(fixed_point!=op.fixed_point);
 };
-//diff ex02
+
+
+
+
 Fixed& Fixed:: min(Fixed& a, Fixed& b)
 {
 	if(a < b)
@@ -137,7 +132,6 @@ const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
 
 
 // aritthmetic operators
-
 Fixed Fixed:: operator+(const Fixed& op)
 {
 	return (Fixed(this->toFloat() + op.toFloat()));
@@ -169,16 +163,17 @@ Fixed	&Fixed ::operator--()
 };
 
 ///Post increment/decrement
-Fixed Fixed::operator++(int) // Postfix increment
+Fixed Fixed::operator++(int)
 {
-    Fixed temp = *this;  // sohranyaet current state
-    ++(*this);           // Increment the current 
-    return temp;         // Return that was at the begining
+	Fixed temp = *this;
+	++(*this);
+	return temp;
 }
 
-Fixed Fixed::operator--(int) // Postfix decrement
+// Postfix decrement
+Fixed Fixed::operator--(int)
 {
-    Fixed temp = *this;  // sohranyaet current state
-    --(*this);           // Increment the current 
-    return temp;         // Return the saved state
+	Fixed temp = *this;
+	--(*this);
+	return temp;
 }
