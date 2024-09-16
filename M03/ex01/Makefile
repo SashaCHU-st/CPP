@@ -1,10 +1,11 @@
-NAME = ClapTrap
+NAME = ScavTrap
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
-		ClapTrap.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp
 	
 		
 

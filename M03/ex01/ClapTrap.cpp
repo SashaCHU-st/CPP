@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:40:53 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 12:57:13 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 11:30:23 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 ClapTrap::ClapTrap(): _name("Default name"),_hitPoints(10), _energyPoints(10), _attack(0)
 {
-	std::cout << "ClapTrav Default Constructor created with" << this->_name<< " "<<std::endl;
+	std::cout << "Default Constructor created with" << this->_name<< " "<<std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attack(0)
 {
-	std::cout << "ClapTrav Parametirized Constructor created with" << this->_name<< " "<<std::endl;
+	std::cout << "Parametirized Constructor created with" << this->_name<< " "<<std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrav Destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
 {
-	std::cout << "ClapTrav Copy operator called" << std::endl;
+	std::cout << "Copy operator called" << std::endl;
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;
@@ -38,7 +38,7 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 
 ClapTrap& ClapTrap:: operator= (const ClapTrap& copy)
 {
-	std::cout << "ClapTrav Assigment operator called" << std::endl;
+	std::cout << "Assigment operator called" << std::endl;
 	if(this == &copy)
 		return(*this);
 	_name = copy._name;
