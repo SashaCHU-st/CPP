@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:39:27 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 14:39:04 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 14:49:29 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ ScavTrap::ScavTrap(): ClapTrap("Someone else from ScavTrap")
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attack = 20;
-	std::cout << "ScavTrap Default Constructor created with"<<std::endl;
+	std::cout << "ScavTrap Default Constructor created with"<< _name<<std::endl;
 }

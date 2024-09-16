@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:41:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 14:33:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 14:51:57 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int main ()
 	ScavTrap defaultscavtrap;//default constructor
 	scavtrap.attack("Someone from ScavTrap");
 	
-	scavtrap.guardGate();
 	// Trying to use all HitPoints
 	scavtrap.takeDamage(20);
 	scavtrap.takeDamage(20);
@@ -74,6 +73,7 @@ int main ()
 	scavtrap.beRepaired(2);/// here should be that he canot be repaired, because no points left already
 	std::cout << "Points energy left for ScavTrap "<<scavtrap.getEnergyP() << std::endl;
 	std::cout << "Points energy left for ScavTrap "<<scavtrap.getHitP() << std::endl;
+	scavtrap.guardGate();
 
 	std::cout << "\n" <<std::endl;
 	std::cout << "/////////////////////////"<< std::endl;
