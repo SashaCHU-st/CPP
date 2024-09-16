@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:41:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 14:04:32 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 14:07:10 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main ()
 {
 	std::cout << "///////////////////////////////////" <<std::endl;
 	std::cout << "ClapTrap" <<std::endl;
+	
 	ClapTrap claptrap ("Kuku");//parameterized constructor
 	ClapTrap defclaptrap1; //default constructor
 	claptrap.attack("Someone else"); //calling attack with name
@@ -55,11 +56,12 @@ int main ()
 	// //checking energy points
 	// std::cout << "Points energy left"<<claptrap.getEnergyP() << std::endl;
 	// claptrap.beRepaired(2); //  here should be that he canot be repaired, because no points left already, beacsue 0 energy left
-		std::cout << "\n" <<std::endl;
-std::cout << "///////////////////////////////////" <<std::endl;
-std::cout << "ScavTrap" <<std::endl;
-	ScavTrap scavtrap("Koko");
-	ScavTrap defaultscavtrap;
+	std::cout << "\n" <<std::endl;
+	std::cout << "///////////////////////////////////" <<std::endl;
+	std::cout << "ScavTrap" <<std::endl;
+
+	ScavTrap scavtrap("Koko");//parameterized constructor
+	ScavTrap defaultscavtrap;//default constructor
 	scavtrap.attack("Someone from ScavTrap");
 	
 
@@ -69,6 +71,7 @@ std::cout << "ScavTrap" <<std::endl;
 	scavtrap.takeDamage(20);
 	scavtrap.takeDamage(20);
 	scavtrap.takeDamage(20);
+	std::cout << "Points energy left for ScavTrap"<<scavtrap.getEnergyP() << std::endl;
 	
 	return(0);
 } 
