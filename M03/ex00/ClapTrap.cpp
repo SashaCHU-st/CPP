@@ -6,23 +6,19 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:40:53 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/13 15:17:15 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 09:46:21 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(): _name("Default name"),_hitPoints(10), _energyPoints(10), _attack(0)
 {
-	std::cout << "Default Constructor called" << std::endl;
-	this->_hitPoints = 10;
-	this->_energyPoints = 10;
-	this->_attack = 0;
+	std::cout << "Default Constructor created with" << this->_name<< " "<<std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attack(0)
 {
-	std::cout << "Parameterized Constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -70,3 +66,36 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " can't be repaired!" << std::endl;
 	}
 }
+
+std::string ClapTrap::getName()const
+{
+	return(this->_name);
+};
+unsigned int ClapTrap::getHitP() const
+{
+	return(this->_hitPoints);
+};
+unsigned int ClapTrap::getEnergyP() const
+{
+	return(this->_energyPoints);
+};
+unsigned int ClapTrap::getAttackP() const
+{
+	return(this->_attack);
+};
+void ClapTrap::setName(std::string name)
+{
+	this->_name = name;
+};
+void ClapTrap::setHitP(unsigned int hitP)
+{
+	this->_hitPoints= hitP;
+};
+void ClapTrap::setEnergyP(unsigned int enerP)
+{
+	this->_energyPoints = enerP;
+};
+void ClapTrap::setAttackP(unsigned int attackP)
+{
+	this->_attack = attackP;
+};

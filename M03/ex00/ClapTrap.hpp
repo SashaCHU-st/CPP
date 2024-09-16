@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:40:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/13 16:53:16 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/16 09:12:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class ClapTrap
 		unsigned int _energyPoints;
 		unsigned int _attack;
 	public:
-		ClapTrap(){};
+		ClapTrap();
 		ClapTrap(std::string _name );
-		~ClapTrap(){};
+		~ClapTrap();
 		
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
@@ -35,10 +35,10 @@ class ClapTrap
 		unsigned int getEnergyP() const;
 		unsigned int getAttackP() const;
 		
-		void setName();
-		void setHitP();
-		void setHitP();
-		void setHitP();
+		void setName(std::string name);
+		void setHitP(unsigned int hitP);
+		void setEnergyP(unsigned int enerP);
+		void setAttackP(unsigned int attackP);
 		
 };
 
