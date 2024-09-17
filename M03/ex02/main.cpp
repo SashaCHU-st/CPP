@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:41:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/17 14:24:14 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/17 14:42:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int main ()
 	claptrap.attack("Someone else"); //calling attack with name
 
 
-	// //Trying to use all HitPoints	
+	// //Trying to use all HitPoints	5*2
 	// for(int i = 0; i < 5; i++)
 	// 	claptrap.takeDamage(2);
 	
-	////TRYING TO ATTACK 10 TIME WHILE THERE IS ENERGY POINTS 
+	////TRYING TO ATTACK 10 TIME WHILE THERE IS ENERGY POINTS 10
 	// for(int i = 0; i <10; i++)
 	// 	claptrap.attack("Someone else"); //calling attack with name
 	
@@ -49,16 +49,20 @@ int main ()
 	// for(int i = 0; i < 5;i++)
 	// 	scavtrap.takeDamage(20);
 
-	//TRYING USE ALL ENERGY POINTS
-	// for(int i = 0; i < 51;i++)
-	// 	scavtrap.attack("Someone esle from FragTrap");
-	// for(int i = 0; i < 51;i++)
-	// 	scavtrap.beRepaired(2);
-	//scavtrap.beRepaired(2);/// here should be that he canot be repaired, because no points left already
+	//TRYING USE ALL ENERGY POINTS 25 energy and 25 from repairing
+	// for(int i = 0; i < 25;i++)
+	// 	scavtrap.attack("Someone from ScavTrap");
+	// for(int i = 0; i < 25;i++)
+	// 	scavtrap.beRepaired(1);
+
+	////TRYING USE ALL ENERGY POINTS 50 energy
+	// for(int i = 0; i < 50;i++)
+	// 	scavtrap.attack("Someone from ScavTrap");
+	scavtrap.beRepaired(2);/// here should be that he canot be repaired, because no points left already
 
 
 	std::cout << "Points energy left for ScavTrap "<<scavtrap.getEnergyP() << std::endl;
-	std::cout << "Points energy left for ScavTrap "<<scavtrap.getHitP() << std::endl;
+	std::cout << "Points Hit left for ScavTrap "<<scavtrap.getHitP() << std::endl;
 	scavtrap.guardGate();
 
 	
@@ -77,9 +81,9 @@ int main ()
 	// }
 	
 	//TO DAMAGE ALL HIT PONIT ARE LEFT
-	for(int i = 0; i < 5; i++)
-		frag.takeDamage(20);
-	frag.beRepaired(2);/// here should be that he canot be repaired, because no points left already
+	// for(int i = 0; i < 5; i++)
+	// 	frag.takeDamage(20);
+	//frag.beRepaired(2);/// here should be that he canot be repaired, because no points left already
 
 	std::cout << "Points energy left for FragTrap "<<frag.getEnergyP() << std::endl;
 	std::cout << "Points hit left for FragTrap "<<frag.getHitP() << std::endl;
