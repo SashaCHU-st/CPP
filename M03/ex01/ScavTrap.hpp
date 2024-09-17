@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:39:22 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 13:37:58 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/17 14:45:26 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class ScavTrap : public  ClapTrap
 		ScavTrap(ScavTrap const &copy);
 		ScavTrap& operator= (const ScavTrap& op);
 		
+		void attack(const std::string& target);
 		void guardGate();
 };
 
