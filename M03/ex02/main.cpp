@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:41:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/17 14:42:08 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/09/20 09:05:14 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int main ()
 
 	////TRYING USE ALL ENERGY POINTS 50 energy
 	// for(int i = 0; i < 50;i++)
+	//smth
 	// 	scavtrap.attack("Someone from ScavTrap");
 	scavtrap.beRepaired(2);/// here should be that he canot be repaired, because no points left already
 
