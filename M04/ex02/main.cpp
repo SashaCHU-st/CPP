@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/10 17:46:36 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:53:49 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 int main()
 {
 	// //ORIGINAL
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 	
-	// delete j;//should not create a leak
-	// delete i;
-	//  return 0;
+	delete j;//should not create a leak
+	delete i;
+	 return 0;
 	//CREATING 
 	// Animal *Animals[100];
 	// for (int i = 0; i < 49; i++)
@@ -47,21 +47,23 @@ int main()
 	// return 0;
 
 	///deep copy
-	Cat *a = new Cat();
-	a->get()->setIdea(1, "kukukukuk");
-	a->makeSound();
-	std::cout<<a->get()->getIdea(1)<<std::endl;
-	std::cout<<a<<std::endl;
+	// Cat *a = new Cat();
+	// a->get()->setIdea(1, "kukukukuk");
+	// a->makeSound();
+	// std::cout<<a->get()->getIdea(1)<<std::endl;
+	// std::cout<<a<<std::endl;
 
 
-	Cat *b = new Cat(*a);
-	delete(a);
+	// Cat *b = new Cat(*a);
+	// delete(a);
 	
-	b->makeSound();
-	std::cout<<a->get()->getIdea(1)<<std::endl;
-	std::cout<<b<<std::endl;
-	delete(b);
-	return(0);
+	// b->makeSound();
+	// std::cout<<a->get()->getIdea(1)<<std::endl;
+	// std::cout<<b<<std::endl;
+	// delete(b);
+	// return(0);
+	//  *a;
+	// return (0);
 	
 }
 	
