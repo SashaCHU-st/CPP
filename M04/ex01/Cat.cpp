@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:12:21 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 15:05:35 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:19:02 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,9 @@ Cat& Cat:: operator= (const Cat& copy)
 void Cat::makeSound() const
 {
 	std::cout << "Myau Myua" << " "<<std::endl;
+}
+
+Brain *Cat::get()
+{
+	return(this->_brain);
 }

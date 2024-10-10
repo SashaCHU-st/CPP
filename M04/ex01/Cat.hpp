@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:05 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:58:55 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:18:30 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Cat: public Animal
 		Cat(Cat const &copy);
 		Cat& operator= (const Cat& op);
 		void makeSound() const;
+		Brain *get();
 };
 
 #endif

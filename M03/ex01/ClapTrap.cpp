@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:40:53 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/16 14:09:37 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:08:55 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ ClapTrap::~ClapTrap()
 ClapTrap::ClapTrap(ClapTrap const &copy)
 {
 	std::cout << "ClapTrap Copy operator called" << std::endl;
-	_name = copy._name;
-	_hitPoints = copy._hitPoints;
-	_energyPoints = copy._energyPoints;
-	_attack = copy._attack;
+	*this= copy;
 };
 
 ClapTrap& ClapTrap:: operator= (const ClapTrap& copy)

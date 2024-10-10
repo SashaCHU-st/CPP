@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:01:05 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 15:06:55 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:17:33 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -27,6 +28,7 @@ class Dog : public Animal
 		Dog(Dog const &copy);
 		Dog& operator= (const Dog& op);
 		void makeSound() const;
+		Brain *get();
 };
 
 #endif

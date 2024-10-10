@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:47:05 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:53:04 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:55:35 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ class Brain
 		std:: string _ideas[100];
 	public:
 		Brain();
-		virtual ~Brain();
+		~Brain();
 		Brain(Brain const &copy);
 		Brain& operator= (const Brain& op);
-
+		
+		std::string getIdea(int index);
+		void setIdea(int index, std::string idea);
 };
 
 #endif

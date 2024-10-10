@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:11:25 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 15:06:25 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:18:15 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,16 @@ Dog& Dog:: operator= (const Dog& copy)
 	if(this == &copy)
 		return(*this);
 	_type = copy._type;
+	*this->_brain = *copy._brain;
 	return(*this);
 }
 
 void Dog::makeSound() const
 {
 	std::cout << "Gav Gav" << " "<<std::endl;
+}
+
+Brain *Dog:: get()
+{
+	return(this->_brain);
 }

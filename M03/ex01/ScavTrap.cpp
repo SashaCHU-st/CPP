@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:39:27 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/17 14:46:09 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:11:02 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap(ScavTrap const &copy) :ClapTrap(copy)
 {
 	std::cout << "ScavTrap copy operator is called" <<std::endl;
+	*this = copy;
 };
 ScavTrap &ScavTrap:: operator= (const ScavTrap& copy)
 {

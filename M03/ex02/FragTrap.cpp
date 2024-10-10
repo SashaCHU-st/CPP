@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 11:39:27 by aheinane          #+#    #+#             */
-/*   Updated: 2024/09/18 09:05:56 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:11:45 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ FragTrap::~FragTrap()
 FragTrap::FragTrap(FragTrap const &copy) :ClapTrap(copy)
 {
 	std::cout << "FragTrap copy operator is called" <<std::endl;
+	*this = copy;
 };
 FragTrap &FragTrap:: operator= (const FragTrap& copy)
 {
