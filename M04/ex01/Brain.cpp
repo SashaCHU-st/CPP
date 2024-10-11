@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:53:15 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/10 16:57:40 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 10:54:30 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ void Brain::setIdea(int index, std::string idea)
 }
 std::string Brain :: getIdea(int index)
 {
-	return(this->_ideas[index]);
+	if (index >= 0 && index < 100)
+		return _ideas[index];
+	 else
+		return ("Error, must be from 0 to 100");
 }

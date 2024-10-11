@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:11:25 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/10 16:18:15 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 11:58:49 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Dog::Dog() : Animal()
 Dog::Dog(std::string _type ): Animal(_type)
 {
 	std::cout << "Dog Parametirized Constructor created with" << this->_type<< " "<<std::endl;
+	this->_brain = new Brain();
 }
 
 Dog::~Dog()
@@ -34,12 +35,13 @@ Dog::~Dog()
 Dog ::Dog(Dog const &copy)
 {
 	std::cout << "Dog Copy constructor called" << std::endl;
+	this->_brain = new Brain();
 	_type = copy._type;
 }
 
 Dog& Dog:: operator= (const Dog& copy)
 {
-	std::cout << " Cat Assigment operator called" << std::endl;
+	std::cout << "Dog Assigment operator called" << std::endl;
 	if(this == &copy)
 		return(*this);
 	_type = copy._type;

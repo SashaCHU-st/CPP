@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/10 17:53:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 09:05:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,9 @@ int main()
 	// std::cout<<b<<std::endl;
 	// delete(b);
 	// return(0);
-	//  *a;
-	// return (0);
+	//  Animal  a;// cannot make copy of Animal because Animal has pure virtual function. ANial is abstract class 
+	Animal *a;
+	return (0);
 	
 }
 	

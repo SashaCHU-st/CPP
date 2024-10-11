@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:54:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:37:37 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:06:26 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class WrongAnimal
 
 		std::string getType() const;
 		//void setType(std::string _type);
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

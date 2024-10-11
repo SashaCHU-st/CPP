@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:41:50 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 10:16:17 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,37 +18,70 @@
 
 int main()
 {
-	// const Animal* meta = new Animal();
+	//ORIGINAL
+	// const Animal* meta = new Animal();// creating Animal 
+	// const Animal* kuku = new Animal("KUKU");
 	// const Animal* j = new Dog();
 	// const Animal* i = new Cat();
-	// std::cout << j->getType() << " " << std::endl;
+	
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "TYPE" <<"\033[0m" << std::endl;
+	// std::cout << meta->getType() << " " << std::endl;// Dog
+	// std::cout << kuku->getType() << " " << std::endl;// Dog
+	// std::cout << j->getType() << " " << std::endl;// Dog
+	// std::cout << i->getType() << " " << std::endl;//Cat
+	
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "SOUNDS" <<"\033[0m" << std::endl;
+	// i->makeSound(); //will output the cat sound! Myau
+	// j->makeSound(); // Gav Gav
+	// meta->makeSound(); /// Animal sound
+	// kuku->makeSound();
+
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "DELETING" <<"\033[0m" << std::endl;
+	// delete kuku;
+	// delete meta;// animal desructor called
+	// delete i;// cat destr
+	// delete j; // dog destr
+	// return 0;
+	
+
+	////Assigmnet operator
+
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "CREATING KUKU" <<"\033[0m" << std::endl;
+	// Animal one("KUKU");
+	// one.makeSound();
+	// std::cout <<  "the one " <<one.getType() << std::endl;
+
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "CREATING TWO (DEAFULT))" <<"\033[0m" << std::endl;
+	// Animal two;
+	// two.makeSound();
+	// std::cout <<  "Two one" <<two.getType() << std::endl;
+
+	// std::cout << "///////////////////////////////////" <<std::endl;
+	// std::cout << "\033[31m" << "ASSIGMENT OP=, NOW TWO SHOULD BECAME ONE" <<"\033[0m" << std::endl;
+	// two = one;
+	// std::cout <<  "Two after operator =" <<two.getType() << std::endl;
+	
+	// return(0);	
+
+	// ///WRONG 
+	// const WrongAnimal* meta = new WrongAnimal();
+	// const WrongAnimal* i = new WrongCat();
+	// // std::cout << j->getType() << " " << std::endl;
 	// std::cout << i->getType() << " " << std::endl;
 	// i->makeSound(); //will output the cat sound!
-	// j->makeSound();
+	// //j->makeSound();
 	// meta->makeSound();
 
 	// delete meta;
 	// delete i;
-	// delete j;
+	// // delete j;
 	
 
-	// return 0;
-
-
-	///WRONG 
-	const WrongAnimal* meta = new WrongAnimal();
-	const WrongAnimal* i = new WrongCat();
-	// std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	//j->makeSound();
-	meta->makeSound();
-
-	delete meta;
-	delete i;
-	// delete j;
-	
-
-	return 0;
+	//return 0;
 	
 }

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:12:21 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/10 16:19:02 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/11 11:53:21 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Cat::Cat() : Animal()
 Cat::Cat(std::string name ): Animal (name)
 {
 	std::cout << "Cat Parametirized Constructor created with" << this->_type<< " "<<std::endl;
+	this->_brain = new Brain();
 }
 
 Cat::~Cat()
