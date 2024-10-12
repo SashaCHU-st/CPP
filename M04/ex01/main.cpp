@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 12:58:17 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 11:23:30 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,54 +25,80 @@ int main()
 	// delete j;//should not create a leak
 	// delete i;
 	//  return 0;
-	//CREATING 
-	// Animal *Animals[100];
-	// for (int i = 0; i < 49; i++)
+
+
+
+	/////CREATING ARRAYS OF DOGS AND CATS
+	// std::cout << "\033[31m" << "DEFAULT CONSTCRUTORS" <<"\033[0m" << std::endl;
+	// Animal *Animals[4];
+	// for (int i = 0; i < 2; i++)
 	// {
 	// 	Animals[i]= new Dog();
-	// 	Animals[i]->makeSound();
+	// 	//Animals[i]->makeSound();
 	// }
-	// for (int i = 50; i < 99; i++)
+	// for (int i =2; i < 4; i++)
 	// {
 	// 	Animals[i]= new Cat();
-	// 	Animals[i]->makeSound();
+	// //	Animals[i]->makeSound();
 	// }
-	// for(int i = 0; i < 100; i++)
-	// 	delete(Animals[i]);
-	// return 0;
 
+	// std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "CHECKING TYPE FOR DOG" <<"\033[0m" << std::endl;
+	// std::cout << Animals[1]->getType() << std::endl;
+	// //Animals[3]->getType();
+	// Animals[1]->makeSound();
+	
+	// std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "CHECKING TYPE FOR CAT" <<"\033[0m" << std::endl;
+	// std::cout << Animals[3]->getType() << std::endl;
+	// //Animals[12]->getType();
+	// Animals[3]->makeSound();
+	
+
+	// std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "DESTRUCTORS" <<"\033[0m" << std::endl;
+	// for(int i = 0; i < 4; i++)
+	// 	delete(Animals[i]);
+	
+	// return(0);
+	
+	
 
 	//Assigmnet operator
-	std::cout << "///////////////////////////////////" <<std::endl;
-	std::cout << "\033[31m" << "CREATING KUKU" <<"\033[0m" << std::endl;
-	Dog one("KUKU");
-	one.makeSound();
-	std::cout <<  "the one " <<one.getType() << std::endl;
+	// 	std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "CREATING KUKU" <<"\033[0m" << std::endl;
+	// Dog one("KUKU");
+	// one.makeSound();
+	// std::cout <<  "the one " <<one.getType() << std::endl;
 
-	one.get()->setIdea(1, "RRRRRRRRRRRR");
+	// one.get()->setIdea(1, "RRRRRRRRRRRR");
 
-	std::cout << "///////////////////////////////////" <<std::endl;
-	std::cout << "\033[31m" << "CREATING TWO (DEAFULT))" <<"\033[0m" << std::endl;
-	Dog two;
-	two.makeSound();
-	std::cout <<  "Two one" <<two.getType() << std::endl;
+	// 	std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "CREATING TWO (DEAFULT))" <<"\033[0m" << std::endl;
+	// Dog two;
+	// two.makeSound();
+	// std::cout <<  "Two one" <<two.getType() << std::endl;
 
-	std::cout << "///////////////////////////////////" <<std::endl;
-	std::cout << "\033[31m" << "ASSIGMENT OP=. THOUGHTS SHOULD BE SAME" <<"\033[0m" << std::endl;
-	two = one;
-	std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
-	std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
-	std::cout << "\033[31m" << "CHANGING THOUGHTS FROM DOG ONE " <<"\033[0m" << std::endl;
-	std::cout << "\033[31m" << "" <<"\033[0m" << std::endl;
-	one.get()->setIdea(1, "ooooooooooooo");
+	// 	std::cout << "" <<std::endl;
+	// std::cout << "\033[31m" << "ASSIGMENT OP=. THOUGHTS SHOULD BE SAME" <<"\033[0m" << std::endl;
+	// two = one;/// kopiruem
+	// std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
+	// std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
+	// std::cout << "\033[31m" << "CHANGING THOUGHTS FROM DOG ONE " <<"\033[0m" << std::endl;
+	// std::cout << "\033[31m" << "" <<"\033[0m" << std::endl;
+	// one.get()->setIdea(1, "000000000");
 	
-	std::cout << "\033[31m" << "NOW THOUNGTS WILL BE DIFFERENT" <<"\033[0m" << std::endl;
-	std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
-	std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
-	std::cout <<  "Two after operator =" <<two.getType() << std::endl;
+	// std::cout << "\033[31m" << "NOW THOUNGTS WILL BE DIFFERENT" <<"\033[0m" << std::endl;
+	// std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
+	// std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
+	// std::cout <<  "Two after operator =" <<two.getType() << std::endl;
 	
 	
-	return(0);	
+	// return(0)
+
+
+
+	
 	////deep copy
 	// Cat *a = new Cat();
 	// a->get()->setIdea(1, "kukukukuk");

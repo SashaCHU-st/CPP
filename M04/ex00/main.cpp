@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 10:16:17 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 12:14:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,14 @@ int main()
 	
 
 	//return 0;
+
+
+	////Copy constrcutor and assigment oper
+	// Animal a;// Animal Default Constructor Default animal 
+	// Animal b = a;// copy constrcuor // Animal Copy constructor called
+	// Animal c;// Animal Default Constructor Default animal
+	// c = a;// assogment opeartor // Animal Assigment operator called
+
+	return(0);
 	
 }

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:12:21 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 11:53:21 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 11:55:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Cat::~Cat()
 Cat ::Cat(Cat const &copy)
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
-	this->_brain = new Brain;
+	this->_brain = new Brain();
 	_type = copy._type;
 }
 
@@ -45,6 +45,7 @@ Cat& Cat:: operator= (const Cat& copy)
 	if(this == &copy)
 		return(*this);
 	_type = copy._type;
+	*this->_brain = *copy._brain;
 	return(*this);
 }
 

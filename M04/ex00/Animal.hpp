@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:54:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:17:37 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 11:40:17 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Animal
 		Animal& operator= (const Animal& op);
 
 		std::string getType() const;
-		//void setType(std::string _type);
 		virtual void makeSound() const;
 };
 

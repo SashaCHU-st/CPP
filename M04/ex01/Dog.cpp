@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:11:25 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 11:58:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 11:55:47 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog() : Animal()
 {
 	this->_type = "Dog";
 	std::cout << "Dog Default Constructor " << this->_type<< " "<<std::endl;
-	this->_brain = new Brain;
+	this->_brain = new Brain();
 }
 
 Dog::Dog(std::string _type ): Animal(_type)

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:54:51 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 14:09:22 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/12 11:52:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ Animal& Animal:: operator= (const Animal& copy)
 	_type = copy._type;
 	return(*this);
 }
-
-// void Animal::setType(std::string _type)
-// {
-// 	this->_type = _type;
-// }
 
 std::string Animal::getType() const
 {
