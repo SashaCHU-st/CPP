@@ -9,6 +9,8 @@ SRCS = main.cpp \
 		AMateria.cpp \
 		ICharacter.cpp \
 		IMaterialSource.cpp \
+		Character.cpp \
+		MateriaSource.cpp \
 
 
 	
