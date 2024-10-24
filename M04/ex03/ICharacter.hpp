@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:06:18 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 13:50:26 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:43:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 class ICharacter
 {
-	private:
-		std::string _name;
+	// private:
+	// 	std::string _name;
 	public:
-	virtual ~ICharacter() {}
+	virtual ~ICharacter() {};
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;
 	virtual void unequip(int idx) = 0;

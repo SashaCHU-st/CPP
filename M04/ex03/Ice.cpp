@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:13:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/22 10:45:19 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/22 13:47:31 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 Ice:: Ice()
 {
-	_types = "KuKu ice";
+	_types = "ice";
 }
 
-Ice::Ice (std:: string type)
+Ice::Ice (std:: string type): AMateria(type)
 {}
 
 Ice::Ice(const Ice &copy)

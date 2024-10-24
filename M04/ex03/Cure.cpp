@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:18:17 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/22 10:45:42 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/22 13:47:50 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 Cure:: Cure()
 {
-	_types = "KuKu Cure";
+	_types = "cure";
 }
 
-Cure::Cure (std:: string type)
+Cure::Cure (std:: string type) : AMateria(type)
 {}
 
 Cure::Cure(const Cure &copy)
@@ -45,5 +45,5 @@ AMateria* Cure::clone() const
 
 void Cure::use (ICharacter& target)
 {
-	std::cout << "* shoots an Cure bolt at *" << target.getName() << std::endl;
+		std::cout << "* heals " <<this->_types <<"’s wounds *" <<std::endl;
 }
