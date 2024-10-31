@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:05:25 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/24 10:39:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:50:14 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ AMateria& AMateria::operator=(const AMateria& type)
 {
 	if(this == &type)
 		return(*this);
-	this->_types  = type.getType();
+	this->_types  = type._types;
 	return(*this);
 }
 
 std:: string const & AMateria::getType()const
 {
-	return(_types);
+	return(this->_types);
 }

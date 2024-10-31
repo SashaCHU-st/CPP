@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/16 11:08:50 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:29:04 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main()
 {
-	//ORIGINAL
+	////ORIGINAL
 	// const Animal* meta = new Animal();// creating Animal 
 	// const Animal* kuku = new Animal("KUKU");
 	// const Animal* j = new Dog();
@@ -68,7 +68,7 @@ int main()
 	
 	// return(0);	
 
-	// ///WRONG 
+	/////WRONG 
 	// const WrongAnimal* meta = new WrongAnimal();
 	// const WrongAnimal* i = new WrongCat();
 	// // std::cout << j->getType() << " " << std::endl;
@@ -82,7 +82,7 @@ int main()
 	// // delete j;
 	
 
-	//return 0;
+	// return 0;
 
 
 	////Copy constrcutor and assigment oper

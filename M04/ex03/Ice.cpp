@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:13:41 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/22 13:47:31 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:36:14 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 #include "ICharacter.hpp"
 #include "Ice.hpp"
 
-Ice:: Ice()
+Ice:: Ice(): AMateria("ice")
 {
+	std::cout << "Ice defaut constructor" << std::endl;
 	_types = "ice";
 }
 
-Ice::Ice (std:: string type): AMateria(type)
-{}
+// Ice::Ice (std:: string type): AMateria("ice")
+// {
+// 	(void)type;
+// 	std::cout << "Ice constructor" << std::endl;
+// }
 
 Ice::Ice(const Ice &copy)
 {
@@ -28,6 +32,8 @@ Ice::Ice(const Ice &copy)
 }
 Ice& Ice::operator=(Ice const &copy)
 {
+	if(this == &copy)
+		return(*this);
 	_types = copy._types;
 	return(*this);
 }
@@ -39,7 +45,7 @@ Ice::~Ice()
 
 AMateria* Ice::clone() const
 {
-	AMateria* kuku = new Ice("new ICE KUKU");
+	AMateria* kuku = new Ice(*this);
 	return(kuku);
 }
 

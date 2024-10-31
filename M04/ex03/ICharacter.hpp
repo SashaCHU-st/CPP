@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:06:18 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/23 13:43:41 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:32:32 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 # define ICHARACTER_HPP
 
 #include <iostream>
-#include "AMateria.hpp"
+class AMateria;
 
 class ICharacter
 {
-	// private:
-	// 	std::string _name;
 	public:
 	virtual ~ICharacter() {};
 	virtual std::string const & getName() const = 0;

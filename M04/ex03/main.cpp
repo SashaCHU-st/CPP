@@ -6,16 +6,17 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:01:11 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 13:24:34 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/25 13:22:05 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "IMateriaSource.hpp"
-// #include "Ice.hpp"
-// #include "Cure.hpp"
-
-
-
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "AMateria.hpp"
 
 int main()
 {
