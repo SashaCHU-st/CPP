@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:18:17 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 09:36:42 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:31:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,13 @@
 
 Cure:: Cure() : AMateria("cure")
 {
-	std::cout << " Default Cure constructor called" <<std::endl;
+	std::cout << "cure Default constructor called" <<std::endl;
 	_types = "cure";
 }
 
-// Cure::Cure (std:: string type) : AMateria("cure")
-// {
-// 	(void)type;
-// 	std::cout << "Cure constructor called" <<std::endl;
-// }
-
 Cure::Cure(const Cure &copy)
 {
-	std::cout << "Copy constructor Cure" <<std::endl;
+	std::cout << "cure Copy constructor" <<std::endl;
 	_types = copy._types;
 }
 Cure& Cure::operator=(Cure const &copy)
@@ -41,7 +35,7 @@ Cure& Cure::operator=(Cure const &copy)
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor" << std::endl;
+	std::cout << "cure destructor" << std::endl;
 }
 
 AMateria* Cure::clone() const

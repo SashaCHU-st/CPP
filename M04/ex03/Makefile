@@ -1,4 +1,4 @@
-NAME = Abstract_class
+NAME = materia
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror

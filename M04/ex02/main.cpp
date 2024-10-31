@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/12 11:37:23 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:11:39 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,28 +93,9 @@ int main()
 	// std::cout <<  "Two after operator =" <<two.getType() << std::endl;
 	// return(0)
 
-
-
-	
-	////deep copy
-	// Cat *a = new Cat();
-	// a->get()->setIdea(1, "kukukukuk");
-	// a->makeSound();
-	// std::cout<<a->get()->getIdea(1)<<std::endl;
-	// std::cout<<a<<std::endl;
-	// Cat *b = new Cat(*a);
-	// delete(a);
-	
-	// b->makeSound();
-	// std::cout<<a->get()->getIdea(1)<<std::endl;
-	// std::cout<<b<<std::endl;
-	// delete(b);
-	//Animal a;
-	//return(0);
-
 	
 	//  Animal  a;// cannot make copy of Animal because Animal has pure virtual function. ANial is abstract class 
-	//Animal *a = new Cat();// this ca be
+	//Animal *a = new Cat();// this can be
 	return (0);
 	
 }

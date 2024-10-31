@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/16 09:48:57 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:10:47 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int main()
 	// const Animal* i = new Cat();
 	// delete j;//should not create a leak
 	// delete i;
-	//  return 0;
+	// return 0;
 
 
 
-	/////CREATING ARRAYS OF DOGS AND CATS
+	// ///CREATING ARRAYS OF DOGS AND CATS
 	// std::cout << "\033[31m" << "DEFAULT CONSTCRUTORS" <<"\033[0m" << std::endl;
 	// Animal *Animals[4];
 	// for (int i = 0; i < 2; i++)
@@ -64,7 +64,7 @@ int main()
 	
 	
 
-	//Assigmnet operator
+	//////////Assigmnet operator
 	// 	std::cout << "" <<std::endl;
 	// std::cout << "\033[31m" << "CREATING KUKU" <<"\033[0m" << std::endl;
 	// Dog one("KUKU");
@@ -94,25 +94,6 @@ int main()
 	// std::cout <<  "Two after operator =" <<two.getType() << std::endl;
 	
 	
-	// return(0)
-
-
-
-	
-	////deep copy
-	// Cat *a = new Cat();
-	// a->get()->setIdea(1, "kukukukuk");
-	// a->makeSound();
-	// std::cout<<a->get()->getIdea(1)<<std::endl;
-	// std::cout<<a<<std::endl;
-	// Cat *b = new Cat(*a);
-	// delete(a);
-	
-	// b->makeSound();
-	// std::cout<<a->get()->getIdea(1)<<std::endl;
-	// std::cout<<b<<std::endl;
-	// delete(b);
-	//Animal a;
-	//return(0);
+	// return(0);
 	
 }
