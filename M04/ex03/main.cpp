@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:01:11 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 12:49:33 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:51:06 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ int main()
 	std::cout << "\033[31m" << "\nUSING THE SKILLS" <<"\033[0m" << std::endl;
 	me->use(0, *bob);// use the skills ice
 	me->use(1, *bob);//use the skill cure
+
+	// ////////TTESTING
+	// me->unequip(0);
+	// me->use(0, *bob);///SHOULD NOT WORK
 	////TESTING
 	// me->use(2, *bob);// use the skills ice
 	// me->use(3, *bob);//use the skill cure
