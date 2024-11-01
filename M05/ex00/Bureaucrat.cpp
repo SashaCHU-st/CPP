@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:50 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/01 17:27:26 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:32:08 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int Bureaucrat:: getGrade(void) const
 	return(this->_grade);
 };
 
-int Bureaucrat::increment(void)const
+int Bureaucrat::increment()
 {
 	if(this->_grade < 1)
 	{
@@ -35,7 +35,7 @@ int Bureaucrat::increment(void)const
 		this->_grade--;
 
 };
-int Bureaucrat::decrement() const
+int Bureaucrat::decrement()
 {
 	if(this->_grade < 1)
 	{
@@ -46,7 +46,7 @@ int Bureaucrat::decrement() const
 		throw GradeTooLowException();
 	}
 	else
-		_grade++;
+		this->_grade++;
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj)
