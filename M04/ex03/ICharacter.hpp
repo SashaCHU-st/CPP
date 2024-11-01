@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:06:18 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 09:32:32 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:07:52 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # define ICHARACTER_HPP
 
 #include <iostream>
-class AMateria;
+class AMateria;// this mean that it wll be declared later
 
 class ICharacter
 {

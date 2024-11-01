@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:53:15 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/11 10:54:30 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 09:35:56 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,18 @@ Brain& Brain::operator= (const Brain& copy)
 
 void Brain::setIdea(int index, std::string idea)
 {
-	this->_ideas[index] = idea;
+	if (index >= 0 && index < 100)
+		this->_ideas[index] = idea;
+	else
+		std::cout << "Error, must be from 0 to 99" <<std::endl;
 }
 std::string Brain :: getIdea(int index)
 {
 	if (index >= 0 && index < 100)
 		return _ideas[index];
-	 else
-		return ("Error, must be from 0 to 100");
+	else
+	{
+		std::cout << "Error, must be from 0 to 99" << std::endl;
+		return "" ;
+	}
 }

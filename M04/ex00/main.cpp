@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 13:05:02 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:58:18 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,20 +68,16 @@ int main()
 	
 	// return(0);	
 
-	// ///WRONG 
+	// ///WRONG ANIMAL
 	// const WrongAnimal* meta = new WrongAnimal();
 	// const WrongAnimal* i = new WrongCat();
-	// // std::cout << j->getType() << " " << std::endl;
 	// std::cout << i->getType() << " " << std::endl;
-	// i->makeSound(); //will output the cat sound!
-	// //j->makeSound();
-	// meta->makeSound();
+	// i->makeSound(); // will make animal sound
+	// meta->makeSound(); //will make animal sound
 
 	// delete meta;
 	// delete i;
-	// // delete j;
 	
-
 	// return 0;
 
 

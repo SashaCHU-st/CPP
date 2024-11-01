@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:01:05 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/07 13:53:56 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:15:16 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 class Dog : public Animal
 {
 	public:
-	Dog();
-	Dog(std::string _name );
-	~Dog();
-	Dog(Dog const &copy);
-	Dog& operator= (const Dog& op);
-	void makeSound() const;
+		Dog();
+		Dog(std::string _name );
+		~Dog();
+		Dog(Dog const &copy);
+		Dog& operator= (const Dog& op);
+		void makeSound() const;
 };
 
 #endif

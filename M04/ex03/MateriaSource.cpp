@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:17:11 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 12:39:53 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:14:53 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ MateriaSource::~MateriaSource()
 
 void  MateriaSource::learnMateria(AMateria* src)
 {
+	if(!src)
+	{
+		std::cout << "Materia not exist" <<std::endl;
+		return;
+	}
 	for (int i = 0; i < 4; i++)
 	{
 		if(this->materials[i] == NULL)
@@ -60,7 +65,9 @@ void  MateriaSource::learnMateria(AMateria* src)
 			return ;
 		}
 	}
-	std::cout << " We are learning materia " <<std::endl;
+	std::cout << "No slots for learning new materia " <<std::endl;
+	delete src;
+	src = NULL;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
@@ -78,7 +85,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 			}
 		}
 		else
-			break;	
+			break;
 	}
 	return(NULL);
 }

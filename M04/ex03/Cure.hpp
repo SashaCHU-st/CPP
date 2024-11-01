@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:14:36 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 09:36:47 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 09:52:37 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Cure: public AMateria
 {
 	public:
 		Cure();
-		//Cure(std:: string name);
 		Cure (const Cure &copy);
 		Cure& operator= (Cure const &copy);
 		~Cure();

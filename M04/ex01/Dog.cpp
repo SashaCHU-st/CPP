@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:11:25 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/12 11:55:47 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:24:03 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ Dog& Dog:: operator= (const Dog& copy)
 	if(this == &copy)
 		return(*this);
 	_type = copy._type;
+	delete this->_brain;
+	this->_brain = new Brain(*copy._brain);
 	*this->_brain = *copy._brain;
 	return(*this);
 }

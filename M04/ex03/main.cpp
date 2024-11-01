@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:01:11 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 14:51:06 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:05:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ int main()
 	me->equip(tmp);// equip "me" with ice
 	tmp = src->createMateria("cure");//create skills cure
 	me->equip(tmp);//equipe me with cure
-	////////////////TESTING
+	// ////////////////TESTING
 	// tmp = src->createMateria("ice");// create skills ice
 	// me->equip(tmp);// equip "me" with ice
 	// tmp = src->createMateria("cure");//create skills cure
+	// me->equip(tmp);//equipe me with cure
+	// tmp = src->createMateria("cure");//create skills cure//// HERE SHOULD BE NO SLOTS
 	// me->equip(tmp);//equipe me with cure
 
 	
@@ -55,7 +57,7 @@ int main()
 	////TESTING
 	// me->use(2, *bob);// use the skills ice
 	// me->use(3, *bob);//use the skill cure
-	// me->use(4, *bob);//use the skill cure
+	// me->use(4, *bob);//use the skill cure /// CANNOT BE MADE
 	
 	std::cout << "\033[31m" << "\nDESTRUCTORS" <<"\033[0m" << std::endl;
 	delete bob;

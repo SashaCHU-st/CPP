@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:42:00 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 12:37:46 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:02:35 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,9 @@ void Character::equip(AMateria* m)
 			return ;
 		}
 	}
+	std::cout << "No slots" << std::endl;
 	delete m;
+	
 }
 void Character::unequip(int idx)
 {
@@ -83,6 +85,8 @@ void Character::unequip(int idx)
 		this->materials[idx] = NULL;
 		return ;
 	}
+	else
+		std::cout << "Cant equip" << std::endl;
 }
 void Character::use(int idx, ICharacter& target)
 {

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 14:43:29 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:23:02 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
-
+#include <exception>
 class Bureaucrat
 {
 	private:
@@ -30,13 +30,23 @@ class Bureaucrat
 		
 		std::string getName() const;// const the function will not modify any member variables of the object
 		int getGrade()const ;
+		int increment()const;
+		int decrement() const;
 
-		// GradeTooHighException();
-		// GradeTooLowException()
-		
-		
-		
-	
+		class GradeTooHighException: public std::exception
+		{
+			const char* what() const noexcept override
+			{
+				return "Too high";
+			}
+		};
+		class GradeTooLowException: public std::exception
+		{
+			const char* what() const noexcept override
+			{
+				return "Too low";
+			}
+		};
 };
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj);// An overload of the insertion («) operator
 

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:03:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/10/31 13:10:47 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:21:09 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,22 @@ int main()
 
 
 
-	// ///CREATING ARRAYS OF DOGS AND CATS
-	// std::cout << "\033[31m" << "DEFAULT CONSTCRUTORS" <<"\033[0m" << std::endl;
+	// /////////CREATING ARRAYS OF DOGS AND CATS
 	// Animal *Animals[4];
 	// for (int i = 0; i < 2; i++)
 	// {
+	// 	std::cout << "\033[31m" << "/////////" <<"\033[0m" << std::endl;
 	// 	Animals[i]= new Dog();
-	// 	//Animals[i]->makeSound();
+	// 	std::cout << Animals[i]->getType() << std::endl;
+	// 	Animals[i]->makeSound();
 	// }
 	// for (int i =2; i < 4; i++)
 	// {
+	// 	std::cout << "\033[31m" << "///////// "<<"\033[0m" << std::endl;
 	// 	Animals[i]= new Cat();
-	// //	Animals[i]->makeSound();
+	// 	std::cout << Animals[i]->getType() << std::endl;
+	// 	Animals[i]->makeSound();
 	// }
-
-	// std::cout << "" <<std::endl;
-	// std::cout << "\033[31m" << "CHECKING TYPE FOR DOG" <<"\033[0m" << std::endl;
-	// std::cout << Animals[1]->getType() << std::endl;
-	// //Animals[3]->getType();
-	// Animals[1]->makeSound();
-	
-	// std::cout << "" <<std::endl;
-	// std::cout << "\033[31m" << "CHECKING TYPE FOR CAT" <<"\033[0m" << std::endl;
-	// std::cout << Animals[3]->getType() << std::endl;
-	// //Animals[12]->getType();
-	// Animals[3]->makeSound();
-	
 
 	// std::cout << "" <<std::endl;
 	// std::cout << "\033[31m" << "DESTRUCTORS" <<"\033[0m" << std::endl;
@@ -64,36 +54,43 @@ int main()
 	
 	
 
-	//////////Assigmnet operator
-	// 	std::cout << "" <<std::endl;
-	// std::cout << "\033[31m" << "CREATING KUKU" <<"\033[0m" << std::endl;
-	// Dog one("KUKU");
-	// one.makeSound();
-	// std::cout <<  "the one " <<one.getType() << std::endl;
+	////////Assigmnet operator
+	std::cout << "\033[31m" << "\nCREATING KUKU" <<"\033[0m" << std::endl;
+	Dog one("KUKU");
+	one.makeSound();
+	std::cout <<  "the one " <<one.getType() << std::endl;
 
-	// one.get()->setIdea(1, "RRRRRRRRRRRR");
 
-	// 	std::cout << "" <<std::endl;
-	// std::cout << "\033[31m" << "CREATING TWO (DEAFULT))" <<"\033[0m" << std::endl;
-	// Dog two;
-	// two.makeSound();
-	// std::cout <<  "Two one" <<two.getType() << std::endl;
+	one.get()->setIdea(1, "RRRRRRRRRRRR");
 
-	// 	std::cout << "" <<std::endl;
-	// std::cout << "\033[31m" << "ASSIGMENT OP=. THOUGHTS SHOULD BE SAME" <<"\033[0m" << std::endl;
-	// two = one;/// kopiruem
-	// std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
-	// std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
-	// std::cout << "\033[31m" << "CHANGING THOUGHTS FROM DOG ONE " <<"\033[0m" << std::endl;
-	// std::cout << "\033[31m" << "" <<"\033[0m" << std::endl;
-	// one.get()->setIdea(1, "000000000");
+
+
+	std::cout << "\033[31m" << "\nCREATING TWO (DEAFULT)" <<"\033[0m" << std::endl;
+	Dog two;
+	two.makeSound();
+	std::cout <<  "Two one " <<two.getType() << std::endl;
+
+
+
+	std::cout << "\033[31m" << "\nASSIGMENT OP=. THOUGHTS SHOULD BE SAME" <<"\033[0m" << std::endl;
+	two = one;
+	std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
+	std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
+	std::cout << "\033[31m" << "CHANGING THOUGHTS FROM DOG ONE " <<"\033[0m" << std::endl;
+	std::cout << "\033[31m" << "" <<"\033[0m" << std::endl;
+	one.get()->setIdea(1, "000000000");
 	
-	// std::cout << "\033[31m" << "NOW THOUNGTS WILL BE DIFFERENT" <<"\033[0m" << std::endl;
-	// std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
-	// std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
-	// std::cout <<  "Two after operator =" <<two.getType() << std::endl;
+
 	
+	std::cout << "\033[31m" << "\nNOW THOUNGTS WILL BE DIFFERENT" <<"\033[0m" << std::endl;
+	std::cout <<  "Idea from one dog: " <<one.get()->getIdea(1)<< std::endl;
+	std::cout <<  "Idea from two  dog: " <<two.get()->getIdea(1)<< std::endl;
+	std::cout <<  "Two after operator =" <<two.getType() << std::endl;
 	
-	// return(0);
+
+	
+	std::cout << "\033[31m" << "\nDESTRUCTORS" <<"\033[0m" << std::endl;
+	
+	return(0);
 	
 }
