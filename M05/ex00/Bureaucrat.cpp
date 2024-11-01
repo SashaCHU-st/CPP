@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:50 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/01 17:32:08 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:01:41 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int Bureaucrat:: getGrade(void) const
 	return(this->_grade);
 };
 
-int Bureaucrat::increment()
+void Bureaucrat::increment()
 {
 	if(this->_grade < 1)
 	{
@@ -33,9 +33,9 @@ int Bureaucrat::increment()
 	}
 	else
 		this->_grade--;
-
+	std::cout << "Incremenet called " << this->_name <<" and grade: " << this->_grade << "\n";
 };
-int Bureaucrat::decrement()
+void Bureaucrat::decrement()
 {
 	if(this->_grade < 1)
 	{
@@ -47,6 +47,7 @@ int Bureaucrat::decrement()
 	}
 	else
 		this->_grade++;
+	std::cout << "Decrement called " << this->_name <<" and grade: " << this->_grade << "\n";
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj)
@@ -74,6 +75,7 @@ Bureaucrat::Bureaucrat(const std::string name, int _grade)
 	}
 	else
 		this->_grade = _grade;
+	std::cout << "Constructor called with name: " << name <<" and grade: " << _grade << "\n";
 }
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {

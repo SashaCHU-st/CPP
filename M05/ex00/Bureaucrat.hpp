@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/01 17:31:58 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:40:54 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class Bureaucrat
 		
 		std::string getName() const;// const the function will not modify any member variables of the object
 		int getGrade()const ;
-		int increment();
-		int decrement();
+		void increment();
+		void decrement();
 
 		class GradeTooHighException: public std::exception
 		{
