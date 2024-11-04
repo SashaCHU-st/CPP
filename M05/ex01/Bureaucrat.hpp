@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:30:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:34:39 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
+
+class Form;
 class Bureaucrat
 {
 	private:
@@ -33,10 +36,13 @@ class Bureaucrat
 		void increment();
 		void decrement();
 
+		///new member function
+		void signForm(Form& form);
+
 		class GradeTooHighException: public std::exception
 		{
 			public:
-				virtual const char* what() const noexcept override;
+				const char* what() const noexcept override;
 			// {
 			// 	return "Too high";
 			// }
@@ -44,7 +50,7 @@ class Bureaucrat
 		class GradeTooLowException: public std::exception
 		{
 			public:
-				virtual const char* what() const noexcept override;
+				const char* what() const noexcept override;
 			// {
 			// 	return "Too low";
 			// }
