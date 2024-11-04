@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:50 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:33:55 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:01:37 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ Bureaucrat::~Bureaucrat()
 
 
 //new member fucntions
-void Bureaucrat::signForm(Form& form)
+void Bureaucrat::signForm(AForm& form)
 {
 	try
 	{
@@ -107,7 +107,18 @@ void Bureaucrat::signForm(Form& form)
 		std::cout << this->_name << " couldn’t sign " << form.getFormName() << " because "<< e.what() << std::endl;
 	}
 }
-
+void Bureaucrat::executeForm(AForm const & form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->_name << " executed " << form.getFormName()<< std::endl;	
+	}
+	catch(std::exception& e)
+	{
+		std::cout <<" couldn’t execute "<< std::endl;
+	}
+}
 
 
 ///////////exceptions

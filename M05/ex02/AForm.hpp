@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:33:12 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:31:45 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 #include <iostream>
 #include <exception>
@@ -19,7 +19,7 @@
 
 
 class Bureaucrat;
-class Form
+class AForm
 {
 	private:
 		const	std::string		_form_name;
@@ -27,11 +27,11 @@ class Form
 		const int				_sign_grade;
 		const int				_execute_grade;
 	public:
-		Form();
-		Form(const Form &copy);
-		Form(const std::string _form_name, const int _sign_grade, const int _execute_grade);
-		Form& operator=(const Form& copy);
-		~Form();
+		AForm();
+		AForm(const AForm &copy);
+		AForm(const std::string _form_name, const int _sign_grade, const int _execute_grade);
+		AForm& operator=(const AForm& copy);
+		virtual ~AForm();
 		
 		////// getters 
 		std::string getFormName() const;// const the function will not modify any member variables of the object
@@ -54,8 +54,9 @@ class Form
 				virtual const char* what() const noexcept override;
 		};
 		
+		virtual void execute(Bureaucrat const & executor) const = 0;
 		
 };
 
-std::ostream& operator<<(std::ostream& out, const Form& obj);// An overload of the insertion («) operator
+std::ostream& operator<<(std::ostream& out, const AForm& obj);// An overload of the insertion («) operator
 #endif

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:34:39 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:21:25 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 #include <iostream>
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 class Bureaucrat
 {
 	private:
@@ -33,11 +33,12 @@ class Bureaucrat
 		
 		std::string getName() const;// const the function will not modify any member variables of the object
 		int getGrade()const ;
+
+		////////member functions
+		void signForm(AForm& form);
+		void executeForm(AForm const & form);
 		void increment();
 		void decrement();
-
-		///new member function
-		void signForm(Form& form);
 
 		class GradeTooHighException: public std::exception
 		{
