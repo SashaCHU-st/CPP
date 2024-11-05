@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:46 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/05 12:23:02 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:56:52 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ std::string RobotomyRequestForm::getTarget()const
 };
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-	
+	srand(time(0));
+	int Nrandom = rand();
 	
 	if (this->getIsSigned() == false)
 	{
@@ -55,10 +56,20 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	else
 	{
 		if(executor.getGrade() <= this->getSignGrade() && this->getExecuteGrade() >= 1)
-			std::cout << this->_target << "DDDDDDDDDDDDDDDDDDDDDDDDDDDDD"<<std::endl;
+		{
+			if(Nrandom%2)
+			{
+				std::cout << "\033[32m" <<this->_target << "has been robotomized successfully" <<"\033[0m" <<std::endl;
+				std::cout << this->_target << " Drum Drum Drum"<<std::endl;
+			}
+			else
+				std::cout << "\033[31m" <<  "the robotomy failed" <<"\033[0m" <<std::endl;
+		}
 		else
+		{
 			std::cout << this->_target << "Failed: "<<std::endl;
 			throw GradeTooLowException();
+		}
 	}
 	
 };
