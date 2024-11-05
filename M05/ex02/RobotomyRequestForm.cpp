@@ -6,19 +6,21 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:46 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 14:34:38 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:23:02 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() :_target("Target kuku")
+RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45)
 {
 	std::cout << "RobotomyRequestForm default constrcutor called" << std::endl;
+	this->_target = "Target kuku";
 };
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("RobotomyRequestForm", 72, 45)
 {
 	std::cout << "RobotomyRequestForm string constructor with "<< this->_target << std::endl;
+	 this->_target =target;
 };
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy)
 {
@@ -42,7 +44,21 @@ std::string RobotomyRequestForm::getTarget()const
 {
 	return(this->_target);
 };
-// void RobotomyRequestForm::execute(Bureaucrat const & executor) const
-// {
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
 	
-// };
+	
+	if (this->getIsSigned() == false)
+	{
+		std::cout << "Form is not signed, maybe need to be signe first?"<<std::endl;
+	}
+	else
+	{
+		if(executor.getGrade() <= this->getSignGrade() && this->getExecuteGrade() >= 1)
+			std::cout << this->_target << "DDDDDDDDDDDDDDDDDDDDDDDDDDDDD"<<std::endl;
+		else
+			std::cout << this->_target << "Failed: "<<std::endl;
+			throw GradeTooLowException();
+	}
+	
+};

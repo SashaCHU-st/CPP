@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:48 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 14:36:32 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:17:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class RobotomyRequestForm : public AForm
 		~RobotomyRequestForm();
 
 		std::string getTarget()const;
-	//	void execute(Bureaucrat const & executor) const;
+		void execute(Bureaucrat const & executor) const;
 		
 };
 #endif
