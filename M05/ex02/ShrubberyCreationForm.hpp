@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 14:36:34 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:04:35 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include <iostream>
+#include <fstream>  
 #include "AForm.hpp"
 
 
@@ -31,7 +32,7 @@ class ShrubberyCreationForm : public AForm
 		~ShrubberyCreationForm();
 
 		std::string getTarget()const;
-		//void execute(Bureaucrat const & executor) const;
+		void execute(Bureaucrat const & executor) const;
 		
 };
 #endif
