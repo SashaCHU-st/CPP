@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:38:31 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:03:58 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:04:23 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,31 @@ int main ()
 
 		kuku2.signForm(Form_test2);
 		std::cout << "Checking was it signed? => " << Form_test2.getIsSigned()<<std::endl;///SHOULD BE 1
+
+
+		///Cansign if increment points 
+		std::cout << "\033[32m" << "EXAMPLE WITH CANNOT SIGN FORM" <<"\033[0m" << std::endl;
+		std::cout << "\033[31m" << "\nCREATING BUREACRAT" <<"\033[0m" << std::endl;
+		Bureaucrat koko("koko", 89);
+			
+		std::cout << "\033[31m" << "\nCREATING FORM" <<"\033[0m" << std::endl;
+		Form Form_test3("GOOD FORM", 89,89);
+
+		std::cout << "\033[31m" << "\nTESTING << OPERATOR" <<"\033[0m" << std::endl;
+		std::cout << Form_test3;
+
+		std::cout << "\033[32m" << "\nTESTING SGNING WITH INCREMENTING" <<"\033[0m" << std::endl;
+
+		
+		std::cout << "\033[31m" << "\nNOW HE CANNOT SIGN FORM" <<"\033[0m" << std::endl;
+		koko.signForm(Form_test3);
+		std::cout << "\033[31m" << "\nINCREMENTING 89 - 1 = 88" <<"\033[0m" << std::endl;
+		koko.increment();
+		std::cout << "\033[31m" << "\nNOW HE CAN" <<"\033[0m" << std::endl;
+		koko.signForm(Form_test3);
+		std::cout <<"Checking was it signed? => " << Form_test3.getIsSigned()<< std::endl;//SHOULD  BE 0 BECAUSE WAS NOT ABLE TO SIGN
+		
+
 
 		
 		std::cout << "\033[32m" << "\nTESTING ASSIGMNET OPERATOR" <<"\033[0m" << std::endl;

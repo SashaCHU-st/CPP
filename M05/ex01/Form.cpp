@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:23 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 14:51:51 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/05 10:24:20 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ Form::~Form()
 ///////member fucntions
 void Form::beSigned(Bureaucrat &obj)
 {
-	if(obj.getGrade() < this->getSignGrade())
+	if(obj.getGrade() <= this->getSignGrade())
 	{
 		this->_isSigned = true;
 	}
