@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:49:58 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/06 11:23:16 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/06 12:34:07 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,21 +57,35 @@ AForm *Intern::make_RobForm()
 	form = new RobotomyRequestForm();
 	return(form);
 };
-AForm*	Intern::makeForm(std::string name_for_form, std::string target )
+AForm*	Intern::makeForm(const std::string name_for_form, const std::string target )
 {
-	for(int i = 0; i< 3; i++)
-	{
-		if(name_for_form == _name_for_form[i])
-		{
-			if(name_for_form == "PresidentialPardonForm")
-				return(make_PresForm());
-			if(name_for_form == "RobotomyRequestForm")
-				return(make_RobForm());
-			else
-				return(make_ShrubForm());
-			std::cout << "Intern creates "<< target << std::endl;
+	AForm* (*formFunctions[])() = {&Intern::make_PresForm, &Intern::make_RobForm, &Intern::make_ShrubForm};
+
+	for (int i = 0; i < 3; i++) {
+		if (name_for_form == _name_for_form[i]) {
+			std::cout << "Intern creates " << target << std::endl;
+			return formFunctions[i]();
 		}
 	}
-	std::cout << "Intern cannot create this form (maybe not exist?)"<< std::endl;
-	return (NULL);
+	std::cout << "Intern cannot create this form (maybe not exist?)" << std::endl;
+	return NULL;
 }
+
+// AForm*	Intern::makeForm(std::string name_for_form, std::string target )
+// {
+// 	for(int i = 0; i< 3; i++)
+// 	{
+// 		if(name_for_form == _name_for_form[i])
+// 		{
+// 			if(name_for_form == "PresidentialPardonForm")
+// 				return(make_PresForm());
+// 			if(name_for_form == "RobotomyRequestForm")
+// 				return(make_RobForm());
+// 			else
+// 				return(make_ShrubForm());
+// 			std::cout << "Intern creates "<< target << std::endl;
+// 		}
+// 	}
+// 	std::cout << "Intern cannot create this form (maybe not exist?)"<< std::endl;
+// 	return (NULL);
+// }
