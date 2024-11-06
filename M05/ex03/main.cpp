@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:38:31 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/05 14:29:21 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:32:58 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,106 +15,78 @@
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "AForm.hpp"
+#include "Intern.hpp"
 
 
 int main ()
 {
-	////////////////////////////////////////EXERISE 3
 
-	/////Presedential
-	// try
-	// {
-	// 	PresidentialPardonForm one("FIRST");
-		
-	// 	std::cout << "\033[31m" << "\nPresindetial Form one created with default name" <<"\033[0m" << std::endl;
-	// 	std::cout << one << std::endl;
+	std::cout << "\033[31m" << "//////ROBOTOMY//////" <<"\033[0m" << std::endl;
+	///////ROBOTOMY
+	try
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
 
-	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
-	// 	Bureaucrat kuku ("kuku", 25);
-		
-	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
-	// 	one.beSigned(kuku);
-	// 	one.execute(kuku);
+		std::cout << "\033[33m" << "CREATING BUREACRAT" <<"\033[0m" << std::endl;
+		Bureaucrat kuku ("Kuku", 5);// ok grade
+		//Bureaucrat kuku ("Kuku", 85); too low grade
 
-		
-	// 	std::cout << "\033[34m" << "\nDESTRUCTORS" <<"\033[0m" << std::endl;
-	// }
-	//  catch(Bureaucrat::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(Bureaucrat::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW
-	// }
-	// catch(AForm::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(AForm::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW 
-	// }
+		rrf->beSigned(kuku);
+		std::cout << "\033[33m" << "executing , shuld be some sound" <<"\033[0m" << std::endl;
+		rrf->execute(kuku);
+
+		std::cout << "\033[34m" << "DESTRCUTORS" <<"\033[0m" << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+
+	std::cout << "\033[31m" << "\n///////PRESIDENTIAL///////" <<"\033[0m" << std::endl;
+	///////Presidential
+	try
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("PresidentialPardonForm", "Bender");
+		std::cout << "\033[33m" << "CREATING BUREACRAT" <<"\033[0m" << std::endl;
+		Bureaucrat kuku ("Kuku", 5);// ok grade
+		//Bureaucrat kuku ("Kuku", 85); ////too low grade
+
+		rrf->beSigned(kuku);
+		std::cout << "\033[33m" << "executing ,SHOUDL PARDON TARGET" <<"\033[0m" << std::endl;
+		rrf->execute(kuku);
+		std::cout << "\033[34m" << "DESTRCUTORS" <<"\033[0m" << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	
-	//////////////Robotomy
-	// try
-	// {
-	// 	RobotomyRequestForm one("FIRST");
-		
-	// 	std::cout << "\033[31m" << "\nPresindetial Form one created with default name" <<"\033[0m" << std::endl;
-	// 	std::cout << one << std::endl;
-
-	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
-	// 	Bureaucrat kuku ("kuku", 25);
-		
-	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
-	// 	one.beSigned(kuku);
-	// 	one.execute(kuku);
-
-		
-	// 	std::cout << "\033[34m" << "\nDESTRUCTORS" <<"\033[0m" << std::endl;
-	// }
-	//  catch(Bureaucrat::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(Bureaucrat::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW
-	// }
-	// catch(AForm::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(AForm::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW 
-	// }
 	
+	std::cout << "\033[31m" << "\n//////SHRUBBERY/////" <<"\033[0m" << std::endl;
+	//ShrubberyCreationForm
+	try
+	{
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("ShrubberyCreationForm", "Bender");
+		std::cout << "\033[33m" << "CREATING BUREACRAT" <<"\033[0m" << std::endl;
+		Bureaucrat kuku ("Kuku", 5);// ok grade
+		//Bureaucrat kuku ("Kuku", 148); ////too low grade
 
-
-	////Shrubbery
-	// try
-	// {
-	// 	ShrubberyCreationForm one("FIRST");
-		
-	// 	std::cout << "\033[31m" << "\nPresindetial Form one created with default name" <<"\033[0m" << std::endl;
-	// 	std::cout << one << std::endl;
-
-	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
-	// 	Bureaucrat kuku ("kuku", 25);
-		
-	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
-	// 	one.beSigned(kuku);
-	// 	one.execute(kuku);
-
-		
-	// 	std::cout << "\033[34m" << "\nDESTRUCTORS" <<"\033[0m" << std::endl;
-	// }
-	//  catch(Bureaucrat::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(Bureaucrat::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW
-	// }
-	// catch(AForm::GradeTooHighException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO HIGH
-	// }
-	// catch(AForm::GradeTooLowException& e){
-	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW 
-	// }
+		rrf->beSigned(kuku);
+		std::cout << "\033[33m" << "executing ,CREATING FILE WITH TREE" <<"\033[0m" << std::endl;
+		rrf->execute(kuku);
+		std::cout << "\033[34m" << "DESTRCUTORS" <<"\033[0m" << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	
 	return(0);
 }

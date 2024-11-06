@@ -1,4 +1,4 @@
-NAME = coffee_maker
+NAME = Intern
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
@@ -8,7 +8,9 @@ SRCS = main.cpp \
 		AForm.cpp \
 		RobotomyRequestForm.cpp \
 		PresidentialPardonForm.cpp \
-		ShrubberyCreationForm.cpp
+		ShrubberyCreationForm.cpp \
+		Intern.cpp \
+		
 
 		
 	
