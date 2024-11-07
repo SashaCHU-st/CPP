@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:52 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/07 09:31:05 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:09:14 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 				outfile <<"         |  |" << std::endl;
 				outfile <<"  ______/____\\____";
 			}
-		//	outfile << "    oxoxoo    ooxoo\n  ooxoxo oo  oxoxooo\n oooo xxoxoo ooo ooox \n oxo o oxoxo  xoxxoxo\n  oxo xooxoooo o ooo\n    ooo\\oo\\  /o/o\n        \\  \\/ /\n         |   /\n         |  |\n         | D|\n         |  |\n         |  |\n  ______/____\\____" << std::endl;
 			outfile.close();
+			std::cout<<"Three has been created, check the files"<< std::endl;
 		}
 		else
 		{

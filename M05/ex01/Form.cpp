@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:23 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/07 08:40:22 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:03:42 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ Form::Form(const Form &copy): _form_name(copy._form_name), _isSigned(copy._isSig
 {
 	std::cout << "Form Copy constructor called" << std::endl;
 }
-Form::Form(const std::string form_name, const int sign_grade, const int execute_grade): _form_name(form_name),_sign_grade(sign_grade), _execute_grade(execute_grade)
+Form::Form(const std::string form_name, const int sign_grade, const int execute_grade): _form_name(form_name),_isSigned(false),_sign_grade(sign_grade), _execute_grade(execute_grade)
 {
 	std::cout << "Form Copy string constructor called" << std::endl;
 	if(sign_grade > 150 || execute_grade > 150)

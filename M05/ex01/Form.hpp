@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:57 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:33:12 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:02:54 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Form
 {
 	private:
 		const	std::string		_form_name;
-		bool					_isSigned;
+		bool					_isSigned = false;
 		const int				_sign_grade;
 		const int				_execute_grade;
 	public:

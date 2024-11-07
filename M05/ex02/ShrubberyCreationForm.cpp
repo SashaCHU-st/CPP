@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:16:52 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/07 09:06:01 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:08:06 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	}
 	else
 	{
-		if(executor.getGrade() <= this->getSignGrade() && this->getExecuteGrade() >= 1)
+		if(executor.getGrade() <= this->getExecuteGrade())
 		{
 			std::string filename = this->_target + "_shrubbery";
 			std::ofstream outfile (filename);
@@ -73,6 +73,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 				outfile <<"  ______/____\\____";
 			}
 			outfile.close();
+			std::cout<<"Three has been created, check the files"<< std::endl;
 		}
 		else
 		{

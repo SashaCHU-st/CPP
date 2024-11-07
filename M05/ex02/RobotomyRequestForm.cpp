@@ -55,7 +55,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	}
 	else
 	{
-		if(executor.getGrade() <= this->getSignGrade() && this->getExecuteGrade() >= 1)
+		if(executor.getGrade() <= this->getExecuteGrade())
 		{
 			if(Nrandom%2)
 			{

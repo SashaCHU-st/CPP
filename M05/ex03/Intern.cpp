@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:49:58 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/07 09:34:01 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:14:43 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,5 @@ AForm*	Intern::makeForm(const std::string name_for_form, const std::string targe
 		}
 	}
 	std::cout << "Intern cannot create this form (maybe not exist?)" << std::endl;
-	return NULL;
+	throw std::out_of_range("Failed");
 }
