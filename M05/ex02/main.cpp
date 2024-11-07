@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:38:31 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/05 14:29:21 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:17:04 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 int main ()
 {
-	////////////////////////////////////////EXERISE 3
+	// ////////////////////////////////////////EXERISE 3
 
-	/////Presedential
+	// ///Presedential
 	// try
 	// {
 	// 	PresidentialPardonForm one("FIRST");
@@ -31,7 +31,7 @@ int main ()
 
 	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
 	// 	Bureaucrat kuku ("kuku", 25);
-		
+	// 	//Bureaucrat kuku ("kuku", 27);///wont be signed becaise more then 25
 	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
 	// 	one.beSigned(kuku);
 	// 	one.execute(kuku);
@@ -52,7 +52,7 @@ int main ()
 	// 	std::cout << e.what() << std::endl; /// SHOULD CATCH ERROR TOO LOW 
 	// }
 	
-	//////////////Robotomy
+	// ////////////Robotomy
 	// try
 	// {
 	// 	RobotomyRequestForm one("FIRST");
@@ -61,9 +61,9 @@ int main ()
 	// 	std::cout << one << std::endl;
 
 	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
-	// 	Bureaucrat kuku ("kuku", 25);
-		
-	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
+	// 	Bureaucrat kuku ("kuku", 25);// can sign
+	// //	Bureaucrat kuku ("kuku", 78);///cannot sign 
+	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 72" <<"\033[0m" << std::endl;
 	// 	one.beSigned(kuku);
 	// 	one.execute(kuku);
 
@@ -85,7 +85,7 @@ int main ()
 	
 
 
-	////Shrubbery
+	// //Shrubbery
 	// try
 	// {
 	// 	ShrubberyCreationForm one("FIRST");
@@ -94,8 +94,8 @@ int main ()
 	// 	std::cout << one << std::endl;
 
 	// 	std::cout << "\033[31m" << "\nBureacrat kuku created with name kuku" <<"\033[0m" << std::endl;
-	// 	Bureaucrat kuku ("kuku", 25);
-		
+	// 	Bureaucrat kuku ("kuku", 25);//can
+	// //	Bureaucrat kuku ("kuku", 148);//canoot sign
 	// 	std::cout << "\033[31m" << "\nForm is not signed if bur. grade is more than 25" <<"\033[0m" << std::endl;
 	// 	one.beSigned(kuku);
 	// 	one.execute(kuku);

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:49:58 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/06 12:34:07 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:34:01 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,53 +39,34 @@ Intern::~Intern()
 {
 	std::cout<< "Intern Destructor called" <<std::endl;
 };
-AForm *Intern::make_PresForm()
+AForm *Intern::make_PresForm(std::string const target)
 {
 	AForm *form;
-	form = new PresidentialPardonForm();
+	form = new PresidentialPardonForm(target);
 	return(form);
 };
-AForm *Intern::make_ShrubForm()
+AForm *Intern::make_ShrubForm(std::string const target)
 {
 	AForm *form;
-	form = new ShrubberyCreationForm();
+	form = new ShrubberyCreationForm(target);
 	return(form);
 };
-AForm *Intern::make_RobForm()
+AForm *Intern::make_RobForm(std::string const target)
 {
 	AForm *form;
-	form = new RobotomyRequestForm();
+	form = new RobotomyRequestForm(target);
 	return(form);
 };
 AForm*	Intern::makeForm(const std::string name_for_form, const std::string target )
 {
-	AForm* (*formFunctions[])() = {&Intern::make_PresForm, &Intern::make_RobForm, &Intern::make_ShrubForm};
+	AForm* (*formFunctions[])(std::string const target) = {&Intern::make_PresForm, &Intern::make_RobForm, &Intern::make_ShrubForm};/// creating array to fucntions pinters
 
 	for (int i = 0; i < 3; i++) {
 		if (name_for_form == _name_for_form[i]) {
 			std::cout << "Intern creates " << target << std::endl;
-			return formFunctions[i]();
+			return (formFunctions[i](target));
 		}
 	}
 	std::cout << "Intern cannot create this form (maybe not exist?)" << std::endl;
 	return NULL;
 }
-
-// AForm*	Intern::makeForm(std::string name_for_form, std::string target )
-// {
-// 	for(int i = 0; i< 3; i++)
-// 	{
-// 		if(name_for_form == _name_for_form[i])
-// 		{
-// 			if(name_for_form == "PresidentialPardonForm")
-// 				return(make_PresForm());
-// 			if(name_for_form == "RobotomyRequestForm")
-// 				return(make_RobForm());
-// 			else
-// 				return(make_ShrubForm());
-// 			std::cout << "Intern creates "<< target << std::endl;
-// 		}
-// 	}
-// 	std::cout << "Intern cannot create this form (maybe not exist?)"<< std::endl;
-// 	return (NULL);
-// }

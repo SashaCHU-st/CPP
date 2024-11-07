@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:54 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:30:49 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 08:35:45 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,11 @@ class Bureaucrat
 		{
 			public:
 				virtual const char* what() const noexcept override;
-			// {
-			// 	return "Too high";
-			// }
 		};
 		class GradeTooLowException: public std::exception
 		{
 			public:
 				virtual const char* what() const noexcept override;
-			// {
-			// 	return "Too low";
-			// }
 		};
 };
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj);// An overload of the insertion («) operator

@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:23 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/05 11:42:11 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:13:50 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 //////////exceptions
 const char* AForm::GradeTooHighException::what() const noexcept
 {
-	return "AForm: Too high";
+	return "AForm: Grade Too high";
 }
 
 const char* AForm::GradeTooLowException::what() const noexcept
 {
-	return "AForm: Too low";
+	return "AForm: Grade Too low";
 }
 
 
@@ -60,7 +60,7 @@ AForm::AForm(const AForm &copy): _form_name(copy._form_name), _isSigned(copy._is
 {
 	std::cout << "AForm Copy constructor called" << std::endl;
 }
-AForm::AForm(const std::string form_name, const int sign_grade, const int execute_grade): _form_name(form_name),_sign_grade(sign_grade), _execute_grade(execute_grade)
+AForm::AForm(const std::string form_name, const int sign_grade, const int execute_grade): _form_name(form_name),_isSigned(false), _sign_grade(sign_grade), _execute_grade(execute_grade)
 {
 	std::cout << "AForm Copy string constructor called" << std::endl;
 	if(sign_grade > 150 || execute_grade > 150)

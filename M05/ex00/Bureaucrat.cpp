@@ -6,12 +6,14 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:22:50 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:28:12 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 08:35:36 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+
+/// GETTERS
 std::string Bureaucrat:: getName(void) const
 {
 	return(this->_name);
@@ -21,6 +23,8 @@ int Bureaucrat:: getGrade(void) const
 	return(this->_grade);
 };
 
+
+///INCREMENT/DECREMNET
 void Bureaucrat::increment()
 {
 	this->_grade--;
@@ -47,6 +51,7 @@ void Bureaucrat::decrement()
 	}
 	std::cout << "Decrement called " << this->_name <<" and grade: " << this->_grade << "\n";
 };
+//OPERATOR OVERLOAD
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj)
 {
@@ -55,7 +60,7 @@ std::ostream& operator<<(std::ostream& out, const Bureaucrat& obj)
 }
 
 
-
+///CONSTRCUCTORS
 Bureaucrat::Bureaucrat() : _name("KUKU"), _grade(150)// since it is const it can be init only when constructor creating
 {
 	std::cout << "Constructor called" << std::endl;
@@ -93,12 +98,14 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Destructor called" << std::endl;
 };
 
+
+///EXCEPTIONS
 const char* Bureaucrat::GradeTooHighException::what() const noexcept
 {
-	return "Bureacrat: Too high";
+	return "Bureacrat: Grade Too high";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const noexcept
 {
-	return "Bureacrat: Too low";
+	return "Bureacrat: Grade Too low";
 }

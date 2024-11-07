@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:57:23 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/05 10:24:20 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 08:40:22 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 //////////exceptions
 const char* Form::GradeTooHighException::what() const noexcept
 {
-	return "Form: Too high";
+	return "Form: Grade Too high";
 }
 
 const char* Form::GradeTooLowException::what() const noexcept
 {
-	return "Form: Too low";
+	return "Form: Grade Too low";
 }
 
 

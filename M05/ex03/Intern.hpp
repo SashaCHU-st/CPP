@@ -6,7 +6,7 @@
 /*   By: aheinane <aheinane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:48:46 by aheinane          #+#    #+#             */
-/*   Updated: 2024/11/06 12:33:58 by aheinane         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:34:33 by aheinane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ class Intern
 		~Intern();
 		
 		AForm	*makeForm(const std::string name_for_form, const std::string target );
-		static AForm *make_PresForm();
-		static AForm *make_ShrubForm();
-		static AForm *make_RobForm();
+		static AForm *make_PresForm(std::string const target);
+		static AForm *make_ShrubForm(std::string const target);
+		static AForm *make_RobForm(std::string const target);
 		
 };
 
