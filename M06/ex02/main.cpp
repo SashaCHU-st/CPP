@@ -9,35 +9,80 @@ Base * generate(void)
     Base *base;
     srand(time(0));
 	int Nrandom = rand();
-    while (1)
+    if(Nrandom%3)
     {
-        if(Nrandom%3)
-        {
-            base = new A();
-            break;
-        }
-        else if(Nrandom%7)
-        {
-            base = new B();
-            break;
-        }
-        else
-        {
-            base = new C();
-            break;
-        }
+        base = new A();
+    }
+    else if(Nrandom%7)
+    {
+        base = new B();
+    }
+    else
+    {
+        base = new C();
     }
     return(NULL);
 };
 
+
+
+
+
 void identify(Base* p)
 {
-    std::cout<< " Identify *"<< typeid(static_cast<Base *>(p)).name() <<std::endl;
+    A *a = dynamic_cast<A *>(p);
+    if(a)
+    {
+        std::cout<< "Identify *" <<std::endl;
+        return;
+    }
+    B *b = dynamic_cast<B *>(p);
+    if(b)
+    {
+        std::cout<< "Identify *" <<std::endl;
+        return;
+    }
+    C *c = dynamic_cast<C *>(p);
+    if(c)
+    {
+        std::cout<< "Identify *" <<std::endl;
+        return;
+    }
 };
 
 void identify(Base& p)
 {
-    std::cout<< " Identify &"<< typeid(static_cast<Base &>(p)).name() <<std::endl;
+    try
+    {
+        A& a = dynamic_cast<A&>(p);
+        (void)a;
+        std::cout<< " Identify &" << std::endl;
+    }
+    catch(const std::bad_cast& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+     try
+    {
+        B& b = dynamic_cast<B&>(p);
+        (void)b;
+        std::cout<< " Identify &" << std::endl;
+    }
+    catch(const std::bad_cast& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+     try
+    {
+        C& c = dynamic_cast<C&>(p);
+        (void)c;
+        std::cout<< " Identify &" << std::endl;
+    }
+    catch(const std::bad_cast& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
 };
 
 int main()
