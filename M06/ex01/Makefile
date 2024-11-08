@@ -4,7 +4,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
-		ScalarConverter.cpp \
+		Serializer.cpp \
 		
 	
 		
