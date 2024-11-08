@@ -1,10 +1,10 @@
-NAME = Serializer
+NAME = real_type
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
-		Serializer.cpp \
+		Base.cpp \
 		
 	
 		
