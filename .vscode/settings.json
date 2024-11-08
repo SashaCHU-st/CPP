@@ -2,6 +2,7 @@
 	"files.associations": {
 		"iostream": "cpp",
 		"exception": "cpp",
-		"new": "cpp"
+		"new": "cpp",
+		"stdexcept": "cpp"
 	}
 }

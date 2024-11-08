@@ -14,4 +14,5 @@ class ScalarConverter
 		ScalarConverter& operator=(const ScalarConverter& copy);
         ~ScalarConverter();
         static void convert(std::string literal);
+       int isChar(std::string& input);
 };
