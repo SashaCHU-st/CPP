@@ -1,13 +1,9 @@
 #define pragma once
 
 #include <iostream>
-#include <string>
-#include <cmath>
 #include <iomanip>
 class ScalarConverter
 {
-    private:
-
     public:
         ScalarConverter();
         ScalarConverter(const ScalarConverter &copy);
@@ -20,5 +16,4 @@ class ScalarConverter
         void int_things(std::string literal);
         void double_things(std::string literal);
         void float_things(std::string literal);
-        int inf_things(std::string literal);
 };
