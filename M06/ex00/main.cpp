@@ -8,7 +8,10 @@ int main(int argc, char **argv)
         ScalarConverter::convert(kuku);
     }
     else
+    {
+        std::cout <<"give 1 argument, not more" << std::endl;
         return(1);
+    }
     return(0);
 
 }

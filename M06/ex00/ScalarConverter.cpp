@@ -67,18 +67,37 @@ int ScalarConverter::inf(std::string literal)
 
 void ScalarConverter::convert(std::string literal)
 { 
+
     if(!isdigit(literal[0]) && literal.length() == 1)
         literal = std::to_string(static_cast<int>(literal[0]));
+    /////INFFFFFF things
     ScalarConverter function;/// becasue i cannot create non static inside static
     if(function.inf(literal))
         return;
+    if(!isdigit(literal[0]) && literal.length() > 1)
     {
-        int kuku;
+        std::cout << "Only chars are acceptable" <<std::endl;
+        return;
+    }
+    int i = 0;
+    while (literal[i])
+    {
+        if(isdigit(literal[i]) && isalpha(literal[i + 1]) && !(literal.back() == 'f'))
+        {
+            std::cout << "No mix" <<std::endl;  
+            return;
+        }
+        i++;
+    }
+    {
+        char kuku;
         std::cout << "char: ";
         try {
             kuku = stoi(literal);
             if (kuku < 33 || kuku > 126)
+            {
                 std::cout << "Non displayable" << std::endl;
+            }
             else
                 std::cout <<'\''<< static_cast<char>(kuku) <<'\''<< std::endl;
         } catch (const std::invalid_argument&) {
@@ -92,9 +111,10 @@ void ScalarConverter::convert(std::string literal)
     {
         int kuku;
         std::cout<< "int: ";
-        try {
-                kuku = stoi(literal);
-                std::cout<< kuku << std::endl;
+        try
+        {
+            kuku = stoi(literal);
+            std::cout<< kuku << std::endl;
         } catch (const std::invalid_argument&) {
             std::cerr << "impossible" << std::endl;
         }
@@ -103,12 +123,14 @@ void ScalarConverter::convert(std::string literal)
         }
     }
     {
-        int kuku;
+        float kuku;
         std::cout<<  "float: ";
         try {
-            kuku = stoi(literal);
-            std::cout<< static_cast<float>(kuku);
-            std::cout<< ".0f"<< std::endl;
+            kuku = stof(literal);
+            if (literal.find('.') == std::string::npos)
+                std::cout << static_cast<float>(kuku) << ".0f" << std::endl;
+            else
+                std::cout << static_cast<float>(kuku) << "f" << std::endl;
         } catch (const std::invalid_argument&) {
             std::cerr << "impossible" << std::endl;
         }
@@ -117,12 +139,14 @@ void ScalarConverter::convert(std::string literal)
         }
     }
      {
-        int kuku;
+        double kuku;
         std::cout<<  "double: ";
         try {
-            kuku = stoi(literal);
-            std::cout<< static_cast<double>(kuku);
-            std::cout<< ".0"<< std::endl;
+            kuku = stod(literal);
+            if(literal.find('.') == std::string::npos)
+                std::cout<< static_cast<double>(kuku) <<".0"<<std::endl;
+            else
+                std::cout<< static_cast<double>(kuku)<<std::endl;
         } catch (const std::invalid_argument&) {
             std::cerr << "impossible" << std::endl;
         }
