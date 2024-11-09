@@ -5,6 +5,11 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
 		ScalarConverter.cpp \
+		inf.cpp \
+		check.cpp \
+		char_int.cpp \
+		double_float.cpp \
+
 		
 	
 		
