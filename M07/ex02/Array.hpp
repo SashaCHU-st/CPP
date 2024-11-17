@@ -1,7 +1,7 @@
 #define pragma once
 
 #include <iostream>
-
+#include <exception>
 template <typename T> class Array
 {
     private:
@@ -14,6 +14,13 @@ template <typename T> class Array
 		Array& operator=(const Array& copy);
 		~Array();
         
-        Array& operator[](const Array& copy);
+        T& operator[](unsigned int i);
+        unsigned int size();
+
+        class NotExist: public std::exception
+		{
+			public:
+				virtual const char* what() const noexcept override;
+		};
 
 };

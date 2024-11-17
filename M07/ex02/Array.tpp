@@ -24,7 +24,30 @@ Array<T>&  Array<T>::operator=(const Array& copy)
     
 };
 
-template <typename T> Array<T>::~Array()
+template <typename T>
+T&  Array<T>::operator[](unsigned int i)
+{
+    if(i >= n)
+        throw NotExist();
+    else
+       return array[i];
+};
+
+template <typename T>
+Array<T>::~Array()
 {
     delete[] this->array;
 };
+
+
+
+template <typename T>
+unsigned int Array<T>::size()
+{
+    return(this->n);
+};
+
+const char* template <typename T>::NotExist::what() const noexcept
+{
+	return "Out of bouneries";
+}

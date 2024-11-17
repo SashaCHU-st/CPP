@@ -4,7 +4,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
-		Array.cpp
+		Array.tpp
 
 		
 	
