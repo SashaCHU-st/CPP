@@ -36,7 +36,7 @@ void identify(Base* p)
     else if (C* c = dynamic_cast<C*>(p))
         std::cout << "Identify *: C" << std::endl;
     else
-        std::cout << "Identify *: Unknown type" << std::endl;
+        std::cout << "Identify *: unknown" << std::endl;
 }
 
 void identify(Base& p)
