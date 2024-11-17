@@ -32,7 +32,7 @@ void ScalarConverter::int_things(std::string literal)
         if (i < 33 || i > 126)
             std::cout << "char: Non displayable" << std::endl;
         else
-            std::cout << "char: " << static_cast<char>(i) << std::endl;
+            std::cout << "char: " <<'\'' << static_cast<char>(i) <<'\'' << std::endl;
         std::cout << "int: " << i << std::endl;
         std::cout << std::fixed << std::setprecision(1);
         std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;

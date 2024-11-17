@@ -5,12 +5,22 @@ void ScalarConverter::float_things(std::string literal)
     try {
             std::cout << "Here I am: originally I am a float" << std::endl;
             float f = std::stof(literal);
-            if (f < 33 || f > 126)
+
+            if(f >= 33 && f <= 126)
+                std::cout << "char: " << '\''<<static_cast<char>(f) << '\''<< std::endl;
+            else if (f > 0 && f < 255 && isprint(f))
                 std::cout << "char: Non displayable" << std::endl;
             else
-                std::cout << "char: " << static_cast<char>(f) << std::endl;
+                std::cout << "char: impossible" << std::endl;
 
-            std::cout << "int: " << static_cast<int>(f) << std::endl;
+            
+            if (f >= static_cast<float>(std::numeric_limits<int>::min()) &&
+                f <= static_cast<float>(std::numeric_limits<int>::max()))
+                std::cout << "int: " << static_cast<int>(f) << std::endl;
+            else
+                std::cout << "int: impossible" << std::endl;
+
+            
             std::cout << std::fixed;
             size_t decimalPos = literal.find('.');
             if (decimalPos != std::string::npos)
@@ -38,12 +48,21 @@ void ScalarConverter::double_things(std::string literal)
     {
         std::cout << "Here I am: originally I am a double" << std::endl;
         double d = std::stod(literal);
-        if (d < 33 || d > 126)
+
+        if(d >= 33 && d <= 126)
+            std::cout << "char: " << '\''<<static_cast<char>(d) << '\''<< std::endl;
+        else if (d > 0 && d < 255 && isprint(d))
             std::cout << "char: Non displayable" << std::endl;
         else
-            std::cout << "char: " << '\''<<static_cast<char>(d) << '\''<< std::endl;
+            std::cout << "char: impossible" << std::endl;
 
-        std::cout << "int: " << static_cast<int>(d) << std::endl;
+
+        if(d >= std::numeric_limits<int>::min() && d <= std::numeric_limits<int>::max())
+            std::cout << "int: " << static_cast<int>(d) << std::endl;
+        else
+            std::cout << "int: " << "impossible" << std::endl;
+
+        
         std::cout << std::fixed;
         size_t decimalPos = literal.find('.');
         if (decimalPos != std::string::npos)

@@ -2,11 +2,6 @@
 
 int ScalarConverter::check(std::string literal)
 {
-    if(!isdigit(literal[0]) && literal.length() > 1)
-    {
-        std::cout << "Only chars are acceptable" <<std::endl;
-        return (1);
-    }
     int i = 0;
     while (literal[i])
     {
@@ -17,5 +12,19 @@ int ScalarConverter::check(std::string literal)
         }
         i++;
     }
+    return(0);
+}
+
+int ScalarConverter::floatPseudo(std::string literal)
+{
+    if(literal == "+inff" || literal == "-inff" || literal == "nanf" || literal == "inff")
+        return(1);
+    return(0);
+}
+
+int ScalarConverter::doublePseudo(std::string literal)
+{
+    if(literal == "+inf" || literal == "-inf" || literal == "nan" || literal == "inf")
+        return(1);
     return(0);
 }
