@@ -5,8 +5,11 @@
 
 struct Data
 {
-    int int_num;
-    double double_num;
+    int         int_num;
+    double      double_num;
+    float       float_num;
+    char        char_s;
+    std::string string_kuku;
 };
 class Serializer {
 public:

@@ -3,8 +3,8 @@
 void ScalarConverter::float_things(std::string literal)
 {
     try {
-            std::cout << "Here I am: originally I am a float" << std::endl;
             float f = std::stof(literal);
+            std::cout << "Here I am: originally I am a float" << std::endl;
 
             if(f >= 33 && f <= 126)
                 std::cout << "char: " << '\''<<static_cast<char>(f) << '\''<< std::endl;
@@ -46,8 +46,8 @@ void ScalarConverter::double_things(std::string literal)
 {
     try
     {
-        std::cout << "Here I am: originally I am a double" << std::endl;
         double d = std::stod(literal);
+        std::cout << "Here I am: originally I am a double" << std::endl;
 
         if(d >= 33 && d <= 126)
             std::cout << "char: " << '\''<<static_cast<char>(d) << '\''<< std::endl;

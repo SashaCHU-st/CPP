@@ -3,8 +3,8 @@ void ScalarConverter::char_things(std::string literal)
 {
     try
     {
-        std::cout<< "Here I am: orginally I am a char" << std::endl;
             char c = literal[0];
+        std::cout<< "Here I am: orginally I am a char" << std::endl;
             if (c < 33 || c > 126)
                 std::cout << "char: Non displayable" << std::endl;
             else
@@ -27,8 +27,8 @@ void ScalarConverter::int_things(std::string literal)
 {
     try
     {
-        std::cout<< "Here I am: orginally I am an int" << std::endl;
         int i = stoi(literal);
+        std::cout<< "Here I am: orginally I am an int" << std::endl;
         if (i < 33 || i > 126)
             std::cout << "char: Non displayable" << std::endl;
         else

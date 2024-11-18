@@ -80,5 +80,7 @@ int main()
 
     identify(base);// void identify(Base* p)
     identify(*base);//void identify(Base& p)
+
+    delete base;
     return(0);
 }
