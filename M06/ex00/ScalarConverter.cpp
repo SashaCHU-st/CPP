@@ -28,8 +28,10 @@ void ScalarConverter::convert(std::string literal)
         function.char_things(literal);
     else if(literal.find('.') == std::string::npos && literal.back() != 'f' && isdigit(literal[0]))
         function.int_things(literal);
-    else if (function.floatPseudo(literal) && literal.back() == 'f')
-        function.float_things(literal);
-    else if (function.doublePseudo(literal) || literal.find('.') != std::string::npos)
+    else if (function.doublePseudo(literal) || (literal.find('.') != std::string::npos && literal.back() !='f'))
         function.double_things(literal);
+    else if (function.floatPseudo(literal) || literal.back() == 'f')
+        function.float_things(literal);
+    else
+        std::cout<< "Ai, Ai, Ai aacceptable values are: int, char, double float and Pseudo literals(inf, nan etc)"<<std::endl;
 };
