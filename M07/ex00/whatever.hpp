@@ -26,8 +26,7 @@ T min(T x, T y)
 }
 
 template <typename T>
-void swap(T &x, T &y)// if not put reference it will work with copies, that means that it will not effeect on original values
-//if not make ref it will make new copies which in not needed, and bascially not gonna have effect on or values.
+void swap(T &x, T &y)
 {
     T temp;
     temp = x;

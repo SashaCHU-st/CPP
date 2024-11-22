@@ -1,9 +1,9 @@
-NAME = array
+NAME = easy_find
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp 
+SRCS = main.cpp
 
 		
 	

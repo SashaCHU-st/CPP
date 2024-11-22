@@ -5,6 +5,7 @@
 		"new": "cpp",
 		"stdexcept": "cpp",
 		"ostream": "cpp",
-		"*.tcc": "cpp"
+		"*.tcc": "cpp",
+		"*.tpp": "cpp"
 	}
 }

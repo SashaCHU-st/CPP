@@ -1,25 +1,35 @@
 #include "Array.hpp"
 
 template <typename T>
-Array<T>::Array(): array(NULL), n(0)
-{}
+Array<T>::Array(): array(nullptr), n(0)
+{
+    std::cout<<"Created empty one"<<std::endl;
+}
 
 template <typename T>
-Array<T>::Array(unsigned int s): array(new T(s)), n(s)
+Array<T>::Array(unsigned int n): array(new T[n]()), n(n)
 {}
 
 
-template <typename T> Array<T>::Array(const Array &copy)
+template <typename T>
+Array<T>::Array(const Array<T>& copy)
 {
-    this* = copy;
+    this->n = copy.n;
+    this->array = new T[n];
+    for (unsigned int i = 0; i < n; i++)
+        this->array[i] = copy.array[i];
 };
 template <typename T>
-Array<T>&  Array<T>::operator=(const Array& copy)
+Array<T>&  Array<T>::operator=(const Array<T>& copy)
 {
     if(this == &copy)   
         return(*this);
-    this->array = copy.array;
-    this->n = copy.array;
+    this->n = copy.n;
+    if(this->array != nullptr)
+        delete[] this->array;
+    this->array = new T[n];
+    for(unsigned int i = 0; i< n; i++)
+        this->array[i] = copy.array[i];
     return(*this);
     
 };
@@ -27,27 +37,29 @@ Array<T>&  Array<T>::operator=(const Array& copy)
 template <typename T>
 T&  Array<T>::operator[](unsigned int i)
 {
-    if(i >= n)
-        throw NotExist();
-    else
-       return array[i];
+    if(i >= n || this->array == nullptr)
+        throw std::out_of_range("out of range");
+    return array[i];
 };
+
+template <typename T>
+const T&  Array<T>::operator[](unsigned int i) const
+{
+    if(i >= n || this->array == nullptr)
+        throw std::out_of_range("out of range");
+    return array[i];
+};
+
 
 template <typename T>
 Array<T>::~Array()
 {
-    delete[] this->array;
+   if (array != nullptr)
+        delete[] array;
 };
-
-
 
 template <typename T>
 unsigned int Array<T>::size()
 {
     return(this->n);
 };
-
-const char* template <typename T>::NotExist::what() const noexcept
-{
-	return "Out of bouneries";
-}
