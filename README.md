@@ -19,8 +19,8 @@ This repository contains exercises and projects to learn C++.
 
 ### Module 04
 📘**Interfaces and Abstract Classes**
-- Build on inheritance concepts to explore interfaces and abstract classes.
-- 
+- Build on inheritance concepts to explore interfaces and abstract classes.\
+  
 ### Module 05
 📘**Exception Handling**
 - Learn about exception handling in C++ using try {} and catch {} blocks.
