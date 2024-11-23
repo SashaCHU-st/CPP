@@ -24,7 +24,7 @@ This repository contains exercises and projects to learn C++.
 ### Module 05
 📘**Exception Handling**
 - Learn about exception handling in C++ using try {} and catch {} blocks.
-- 
+  
 ### Module 06
 📘**Casting in C++**
 - Understand and practice different types of casting in C++ (static_cast, dynamic_cast, reinterpret_cast).
