@@ -15,36 +15,50 @@ Span& Span:: operator=(const Span& copy)
         return(*this);
     _N = copy._N;
     vec = copy.vec;
-    vec2 = copy.vec2;
+    sorted = copy.sorted;
     return(*this);
 
 }
 
 void Span::addNumber(unsigned int number)
 {
-    vec.push_back(number);
-    vec2 = vec;
-    std::sort(vec2.begin(), vec2.end());
+    if(_N <= vec.size() || !vec.empty())
+    {
+        vec.push_back(number);
+        sorted = vec;
+        std::sort(sorted.begin(), sorted.end());
+    }
+    throw std::out_of_range ("Out of range");
 }
 
 unsigned int Span::longestSpan()
 {
-    int last = vec2.back();
-    int first = vec2.front();
-
-    int max = last - first;
+    int last;
+    int first;
+    int max;
+    if(vec.size() > 1 || !vec.empty())
+    {
+        last = sorted.back();
+        first = sorted.front();
+        max = last - first;
+    }
+    else
+        throw std::out_of_range("Need more the 1 numbers");
     return(max);
 };
 unsigned  int Span::shortestSpan()
 {
-
     unsigned int min = std::numeric_limits<unsigned int>::max();
-
-    for(auto it = vec2.begin(); it!= vec2.end() -1 ;++it)
+    if(vec.size() > 1 || !vec.empty())
     {
-        // std::cout<< *it<<" ";
-        unsigned int difference = *(it + 1) - *it;
-        min = std::min(min, difference);
+        for(auto it = sorted.begin(); it!= sorted.end() -1 ;++it)
+        {
+            // std::cout<< *it<<" ";
+            unsigned int difference = *(it + 1) - *it;
+            min = std::min(min, difference);
+        }
     }
+    else
+        throw std::out_of_range("Need more the 1 numbers");
     return(min);
 };

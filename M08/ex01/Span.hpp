@@ -9,7 +9,7 @@ class Span
 {  
     private:
         std::vector<int> vec;
-        std::vector<int> vec2;
+        std::vector<int> sorted;
         unsigned int _N;
     public:
         Span();
@@ -19,6 +19,7 @@ class Span
         void addNumber(unsigned int number);
         unsigned int shortestSpan();
         unsigned  int longestSpan();
+        
 
     
 
