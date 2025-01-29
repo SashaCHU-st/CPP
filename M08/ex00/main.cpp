@@ -2,16 +2,164 @@
 
 int main ()
 {
-    std::vector<int> vec = {1,2,3,4,5, 6};
+  std::vector<int> vec = {1,2,3,4,5, 6};
+  std::vector<int> vec0 = {};
+
+  std::array<int, 6> arr = {1,2,3,4,5, 6};
+  std::array<int,0> arr0 = {};
+
+  std::deque<int> deq = {1,2,3,4,5, 6};
+  std::deque<int> deq0 = {};
+
+  std::forward_list<int> forw = {1,2,3,4,5, 6};
+  std::forward_list<int> forw0 = {};
+
+  std::list<int> list = {1,2,3,4,5, 6};
+  std::list<int> list0 = {};
 
 
-    
-    std::vector<int>::iterator v = vec.begin();
-    while( v != vec.end()) {
-      std::cout << "value of v = " << *v << std::endl;
-      v++;
-   }
+	std::cout << "\033[32m" << "Vector" <<"\033[0m" << std::endl;
 
-    easyfind(vec, 3);
+	std::cout << "\033[31m" << "All good=>found" <<"\033[0m" << std::endl;
+    try{
+      easyfind(vec, 3);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
 
+  std::cout << "\033[31m" << "Not found in container" <<"\033[0m" << std::endl;
+    try{
+      easyfind(vec, 0);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
+
+	std::cout << "\033[31m" << "Empty" <<"\033[0m" << std::endl;
+    try{
+      easyfind(vec0, 7);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
+
+
+	std::cout << "\033[32m" << "\nArray" <<"\033[0m" << std::endl;
+    	std::cout << "\033[31m" << "All good=>found" <<"\033[0m" << std::endl;
+    try{
+      easyfind(arr, 3);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
+
+  std::cout << "\033[31m" << "Not found in container" <<"\033[0m" << std::endl;
+    try{
+      easyfind(arr, 0);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
+
+	std::cout << "\033[31m" << "Empty" <<"\033[0m" << std::endl;
+    try{
+      easyfind(arr0, 7);
+    }
+    catch(const std::exception& e)
+    {
+      std::cerr << e.what() << '\n';
+    }
+
+
+
+  //   std::cout << "\033[32m" << "\nForward list" <<"\033[0m" << std::endl;
+  //   	std::cout << "\033[31m" << "All good=>found" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(forw, 3);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+  // std::cout << "\033[31m" << "Not found in container" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(forw, 0);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+	// std::cout << "\033[31m" << "Empty" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(forw0, 7);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+  //       std::cout << "\033[32m" << "\nDeque" <<"\033[0m" << std::endl;
+  //   	std::cout << "\033[31m" << "All good=>found" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(deq, 3);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+  // std::cout << "\033[31m" << "Not found in container" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(deq, 0);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+	// std::cout << "\033[31m" << "Empty" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(deq0, 7);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+  //           std::cout << "\033[32m" << "\nList" <<"\033[0m" << std::endl;
+  //   	std::cout << "\033[31m" << "All good=>found" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(list, 3);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+  // std::cout << "\033[31m" << "Not found in container" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(list, 0);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+
+	// std::cout << "\033[31m" << "Empty" <<"\033[0m" << std::endl;
+  //   try{
+  //     easyfind(list0, 7);
+  //   }
+  //   catch(const std::exception& e)
+  //   {
+  //     std::cerr << e.what() << '\n';
+  //   }
+    return(0);
 }

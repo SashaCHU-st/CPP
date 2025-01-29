@@ -1,21 +1,25 @@
 #define pragma once
 
 #include <iostream>
+# include <algorithm>// find
+#include <array>
+#include <deque>
+#include <forward_list>
+#include <list>
 #include <vector>
 #include <exception>
 
 
 template <typename T>
-T easyfind(T x, int y)
+void easyfind(T &x, int y)
 {
-   find_if(x.begin(), x.end, y)
+     auto it = std::find(x.begin(), x.end(), y);
 
-   if()
-   {
-        std::cout<<"not found"<<std::endl;
-        return;
-   }
-    std::cout<<y<<" found in container"<<std::endl;
-
+     if(x.empty())
+          throw std::out_of_range("Out of Range");
+     if(it != x.end())
+          std::cout<<"Found"<<std::endl;
+     else
+          throw std::out_of_range("Out of Range");
     
 }
