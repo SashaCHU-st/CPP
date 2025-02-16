@@ -117,10 +117,10 @@ int BitcoinExchange::inputData(const std::string& inputData)
     std::getline(file, line);
     while (std::getline(file, line))
     {
-        if (*(line.end()-1) == '|' || line.length() < 11 ) //2001-42-42 |
+        if (*(line.end()-1) == '|' || line.length() < 11 ) //for dates withpit | => whcih is not valid
 		{
 			std::cerr << "Error: bad input" << "=> " << line <<std::endl;
-            continue; // no value
+            continue;// just skip
 		}
         size_t pos = line.find('|');
         if(pos!=std::string::npos)
