@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <algorithm>// for erase
 #include <map>
 #include <fstream>
 #include <string.h>

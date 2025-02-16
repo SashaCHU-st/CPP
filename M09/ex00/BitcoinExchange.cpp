@@ -99,6 +99,8 @@ int BitcoinExchange::validate(std::string datesInput, std::string priceInput)
             return 1;
         --it;
     }
+    datesInput.erase(std::remove(datesInput.begin(), datesInput.end(), ' '), datesInput.end());
+
     std::cout << datesInput << "=> " << priceInputDouble << " = " << it->second * priceInputDouble << std::endl;
     return(0);
 
