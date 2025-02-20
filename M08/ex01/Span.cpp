@@ -22,15 +22,16 @@ Span& Span:: operator=(const Span& copy)
 
 void Span::addNumber(unsigned int number)
 {
-    if(_N >= vec.size() || !vec.empty())
+    if(vec.size() < _N)
     {
         vec.push_back(number);
         sorted = vec;
         std::sort(sorted.begin(), sorted.end());
     }
     else
-        throw std::out_of_range ("Out of range");
+        throw std::out_of_range("Out of range");
 }
+
 
 void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {

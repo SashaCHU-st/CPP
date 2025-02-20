@@ -11,7 +11,7 @@ class MutantStack: public std::stack <T, Container>{
         MutantStack():std:: stack<T, Container>(){};
         ~MutantStack(){}
 
-        typedef typename Container::iterator iterator;
+        typedef typename Container::iterator iterator;//typedef creates an alias for the iterator of the underlying container
 
         MutantStack(const MutantStack& copy)
         {

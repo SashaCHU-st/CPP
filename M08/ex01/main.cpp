@@ -7,6 +7,14 @@ int main()
     sp.addNumber(17);
     sp.addNumber(9);
     sp.addNumber(11);
+
+    //out of range
+    // try {
+    //     sp.addNumber(11);
+    // } catch (const std::out_of_range& e) {
+    //     std::cerr << "Exception: " << e.what() << std::endl;
+    // }
+
     
     std::cout << sp.shortestSpan() << std::endl;
     std::cout << sp.longestSpan() << std::endl;
