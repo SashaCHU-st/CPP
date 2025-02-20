@@ -22,7 +22,7 @@ Span& Span:: operator=(const Span& copy)
 
 void Span::addNumber(unsigned int number)
 {
-    if(vec.size() < _N)
+    if(vec.size() <= _N)
     {
         vec.push_back(number);
         sorted = vec;
@@ -35,8 +35,13 @@ void Span::addNumber(unsigned int number)
 
 void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
+    size_t newElements = std::distance(begin, end);
+
+    if (sorted.size() + newElements > _N)
+        throw std::out_of_range("Out of range");
     sorted.insert(sorted.end(), begin, end);
 }
+
 
 unsigned int Span::longestSpan()
 {
