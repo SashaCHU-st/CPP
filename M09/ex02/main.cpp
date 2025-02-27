@@ -2,43 +2,58 @@
 
 int checkInput(int argc, char **argv)
 {
-    if(argc < 3)
+    if (argc < 3)
     {
-        std::cerr <<"Not enough to sort"<< std::endl;
-        return(1);
+        std::cerr << "Not enough to sort" << std::endl;
+        return 1;
     }
 
-    int i = 1;
-    while (argv[i])
+    for (int i = 1; i < argc; i++)
     {
-        if(!isdigit(*argv[i]) || std::stoi(argv[i]) < 0)
+        std::string arg = argv[i];
+        for (char c : arg)
         {
-            std::cerr <<"Wrong input, not digit"<< std::endl;
-            return(1);
+            if (!isdigit(c))
+            {
+                std::cerr << "Wrong input, not a digit: " << arg << std::endl;
+                return 1;
+            }
         }
-        i++;
+        try
+        {
+            int value = std::stoi(arg);
+            if (value < 0)
+            {
+                std::cerr << "Wrong input, negative number: " << value << std::endl;
+                return 1;
+            }
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << "Invalid number format: " << arg << std::endl;
+            return 1;
+        }
     }
-    
-    return(0);
+
+    return 0;
 }
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-   if(checkInput(argc, argv) == 1)
+    if (checkInput(argc, argv) == 1)
     {
-        // std::cerr <<"Wrong input, not digit"<< std::endl;
-        return(1);
+        return 1;
     }
+
     std::cout << "Before:";
-    int i = 1;
-    while (argv[i])
+    for (int i = 1; i < argc; i++)
     {
-        std::cout<<" " <<argv[i];
-        i++;
+        std::cout << " " << argv[i];
     }
+    std::cout << std::endl;
 
     PmergeMe pmerge;
     pmerge.forVector(argc, argv);
-    
-    
+
+    return 0;
 }

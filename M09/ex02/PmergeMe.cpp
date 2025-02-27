@@ -16,31 +16,71 @@ void PmergeMe::pair(int argc, char **argv)
     int amount;
     if(argc % 2 == 0)
     {
-        amount = argc;
+        amount = argc; // pmerge 3 5 7 6, i starts from 1 so while i < amount
     }
     else
-        amount = argc - 1;
-    int i = 1;
-    while (argv[i])
+        amount = argc - 1; //pmerge 3 5 7 6 1 , i starts from 1 so while i < amount, will not take last one
+    // int i = 1;
+    for (int i = 1; i < amount; i += 2)
     {
-        number1 = std::stoi(argv[i]);
-        number2 = std::stoi(argv[i+1]);
-        if(number1 > number2)
-            vecpair.push_back(std::make_pair(number1,number2));
+        try
+        {
+            number1 = std::stoi(argv[i]);
+            number2 = std::stoi(argv[i+1]);
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << "Error: Invalid number format in input!" << std::endl;
+            return;
+        }
+        if (number1 < number2)
+            vecpair.emplace_back(number1, number2);
         else
-            vecpair.push_back(std::make_pair(number2,number1));
-        i= i+2;
+            vecpair.emplace_back(number2, number1);
     }
 }
-void assigning (const std::vector<std::pair<int, int>>& vecpair)
+
+void PmergeMe::assigning()
 {
-    for (size_t i = 0; i < vecpair.size(); i++) {
-        char label = (i % 2 == 0) ? 'a' : 'b';
-        int index = (i / 2) + 1; 
-
-
+    for(const auto &pair :vecpair)
+    {
+        A.push_back(pair.first);
+        B.push_back(pair.second);
+    }
+    ///delete later printing
+    std::cout << " \nA:";
+    for (int numbers : A)
+    {
+        std::cout << numbers << " ";
+    }
+    std::cout << " \nB:";
+    for (int numbers : B)
+    {
+        std::cout << numbers << " ";
     }
 }
+
+void PmergeMe::sortAvec()
+{
+    std::sort(A.begin(), A.end());
+    std::cout << " \n SORTED A:";
+    for (int numbers : A)
+    {
+        std::cout << numbers << " ";
+    }
+}
+void PmergeMe::sortBvec()
+{
+    std::sort(B.begin(), B.end());
+    std::cout << " \n SORTED B:";
+    for (int numbers : B)
+    {
+        std::cout << numbers << " ";
+    }
+}
+
+
+
 
 int PmergeMe::forVector(int argc, char **argv)
 {
@@ -51,8 +91,12 @@ int PmergeMe::forVector(int argc, char **argv)
         std::cout << "(" << vecpair[i].first << ", " << vecpair[i].second << ") ";
     }
 
-    assigning(vecpair);
+    assigning();// asigning to a and b vectors
 
+    sortAvec();//sorting a 
+    sortBvec();// sorting b
+
+    // insertBintoA();
     return(0);
 
 };

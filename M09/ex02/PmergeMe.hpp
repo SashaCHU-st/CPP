@@ -1,7 +1,10 @@
 #pragma once
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <list>
+#include <cctype> 
+#include <cstdlib>
 
 class PmergeMe
 {
@@ -16,7 +19,9 @@ class PmergeMe
     int forVector(int argc, char **argv);
     void pair(int argc, char **argv);
     std::vector<std::pair<int,int>> vecpair;
-    void assigning(const std::vector<std::pair<int, int>>& vecpair);
-    std::pair<int, int> a;
-    std::pair<int, int> b;
+    std::vector<int> A;
+    std::vector<int> B;
+    void assigning();
+    void sortAvec();
+    void sortBvec();
 };
