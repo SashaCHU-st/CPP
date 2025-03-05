@@ -55,6 +55,7 @@ int main(int argc, char **argv)
 
     PmergeMe pmerge;
     pmerge.forVector(argc, argv);
+    pmerge.forList(argc, argv);
 
     return 0;
 }

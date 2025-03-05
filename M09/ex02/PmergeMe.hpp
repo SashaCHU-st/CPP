@@ -16,16 +16,21 @@ class PmergeMe
     public:
         PmergeMe();
         ~PmergeMe();
-        //utils
-    //    int checkInput(int argc, char **argv);
 
-    int forVector(int argc, char **argv);
-    void pair(int argc, char **argv);
+    //for vector
     std::vector<std::pair<int,int>> vecpair;
     std::vector<int> A;
     std::vector<int> B;
+    int forVector(int argc, char **argv);
+    void pair(int argc, char **argv);
     void assigning();
     void sortAvec();
     void sortBvec();
     void insertBintoA();
+
+
+    //for list 
+    std::list<std::pair<int, int>> listPair;
+    int forList(int argc, char **argv);
+    void pairList(int argc, char **argv);
 };
