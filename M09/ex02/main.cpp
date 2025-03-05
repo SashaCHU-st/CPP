@@ -44,6 +44,7 @@ int main(int argc, char **argv)
     {
         return 1;
     }
+    // size = argc - 1;
 
     std::cout << "Before:";
     for (int i = 1; i < argc; i++)

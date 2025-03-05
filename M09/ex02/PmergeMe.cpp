@@ -84,6 +84,8 @@ void PmergeMe::sortBvec()
 
 int PmergeMe::forVector(int argc, char **argv)
 {
+    auto vecSortStart = std::chrono::high_resolution_clock::now();
+    size = argc - 1;
     pair(argc, argv);
 
     std::cout << "\nnow";
@@ -96,8 +98,38 @@ int PmergeMe::forVector(int argc, char **argv)
     sortAvec();//sorting a 
     sortBvec();// sorting b
 
-    // insertBintoA();
+    insertBintoA();
+    auto vecSortEnd = std::chrono::high_resolution_clock::now();
+    vecDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(vecSortEnd-vecSortStart).count();
+    std::cout << "\nTime to process a range of " << size << " elements with std::vector : " << vecDuration/1000 << "us"<< std::endl;
     return(0);
 
 };
 
+void PmergeMe::insertBintoA()
+{
+    std::vector<int> sortedA = A;
+
+    int insertSize = 1;
+    int inserted = 0;
+
+    while (inserted < static_cast<int>(B.size()))/// until all elements from B => A
+    {
+
+        int endIdx = std::min(inserted + insertSize, (int)B.size());// ensure that amount of insertion
+                                                                    //not more then the size of B
+        for (int i = inserted; i < endIdx; i++)
+        {
+            auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), B[i]);//. ifnd the pos in sortedA 
+                                                                            //where B[i] can be insorted
+            sortedA.insert(pos, B[i]);///position found 
+        }
+        inserted = endIdx;// changing everytime how many have ben inserted,a nd start from this number 
+        insertSize *= 2;
+    }
+    std::cout << "\nAfter ";
+    for (int num : sortedA)
+        std::cout << num << " ";
+    
+
+}

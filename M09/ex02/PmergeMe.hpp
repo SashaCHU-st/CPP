@@ -5,11 +5,14 @@
 #include <list>
 #include <cctype> 
 #include <cstdlib>
+#include <chrono>
 
 class PmergeMe
 {
     private:
         int odd_number = -1;
+        int size;
+        double vecDuration;
     public:
         PmergeMe();
         ~PmergeMe();
@@ -24,5 +27,5 @@ class PmergeMe
     void assigning();
     void sortAvec();
     void sortBvec();
-    // void insertBintoA();
+    void insertBintoA();
 };
