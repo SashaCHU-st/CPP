@@ -9,7 +9,7 @@
 class PmergeMe
 {
     private:
-
+        int odd_number = -1;
     public:
         PmergeMe();
         ~PmergeMe();
@@ -24,4 +24,5 @@ class PmergeMe
     void assigning();
     void sortAvec();
     void sortBvec();
+    // void insertBintoA();
 };

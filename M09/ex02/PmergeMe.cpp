@@ -9,27 +9,18 @@ PmergeMe::~PmergeMe()
     
 };
 
-void PmergeMe::pair(int argc, char **argv)
-{
+void PmergeMe::pair(int argc, char **argv) {
     unsigned int number1;
     unsigned int number2;
-    int amount;
-    if(argc % 2 == 0)
-    {
-        amount = argc; // pmerge 3 5 7 6, i starts from 1 so while i < amount
-    }
-    else
-        amount = argc - 1; //pmerge 3 5 7 6 1 , i starts from 1 so while i < amount, will not take last one
-    // int i = 1;
-    for (int i = 1; i < amount; i += 2)
-    {
-        try
-        {
+    int amount = argc - 1;
+
+    std::cout << "!!! " << amount << std::endl;
+
+    for (int i = 1; i < amount; i += 2) {
+        try {
             number1 = std::stoi(argv[i]);
-            number2 = std::stoi(argv[i+1]);
-        }
-        catch (const std::exception &e)
-        {
+            number2 = std::stoi(argv[i + 1]);
+        } catch (const std::exception &e) {
             std::cerr << "Error: Invalid number format in input!" << std::endl;
             return;
         }
@@ -38,27 +29,36 @@ void PmergeMe::pair(int argc, char **argv)
         else
             vecpair.emplace_back(number2, number1);
     }
+    if(amount %2 != 0)
+    {
+        odd_number = std::stoi(argv[argc - 1]);
+    }
 }
 
-void PmergeMe::assigning()
-{
-    for(const auto &pair :vecpair)
-    {
+
+
+
+void PmergeMe::assigning() {
+    for (const auto &pair : vecpair) {
         A.push_back(pair.first);
         B.push_back(pair.second);
     }
-    ///delete later printing
+    if (odd_number != -1) {
+        A.push_back(odd_number);
+    }
+
+    // Debug printing
     std::cout << " \nA:";
-    for (int numbers : A)
-    {
+    for (int numbers : A) {
         std::cout << numbers << " ";
     }
     std::cout << " \nB:";
-    for (int numbers : B)
-    {
+    for (int numbers : B) {
         std::cout << numbers << " ";
     }
 }
+
+
 
 void PmergeMe::sortAvec()
 {
@@ -100,3 +100,4 @@ int PmergeMe::forVector(int argc, char **argv)
     return(0);
 
 };
+
