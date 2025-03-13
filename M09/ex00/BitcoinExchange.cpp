@@ -101,7 +101,7 @@ int BitcoinExchange::validate(std::string datesInput, std::string priceInput)
     }
     datesInput.erase(std::remove(datesInput.begin(), datesInput.end(), ' '), datesInput.end());
 
-    std::cout << datesInput << "=> " << priceInputDouble << " = " << it->second * priceInputDouble << std::endl;
+    std::cout << datesInput << " => " << priceInputDouble << " = " << it->second * priceInputDouble << std::endl;
     return(0);
 
 }
@@ -121,7 +121,7 @@ int BitcoinExchange::inputData(const std::string& inputData)
     {
         if (*(line.end()-1) == '|' || line.length() < 11 ) //for dates withpit | => whcih is not valid
 		{
-			std::cerr << "Error: bad input" << "=> " << line <<std::endl;
+			std::cerr << "Error: bad input" << " => " << line <<std::endl;
             continue;// just skip
 		}
         size_t pos = line.find('|');
