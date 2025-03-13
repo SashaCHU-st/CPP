@@ -23,8 +23,14 @@ int RPN::polishCalculation(std::string argument)
 //         }
         try 
         {
-            int num = std::stoi(token); // Convert string to int
-            polishNumbers.push(num);
+            int num = std::stoi(token);
+            if (num < 10 && num > -10) // Only allow numbers less than 10
+                polishNumbers.push(num);
+            else
+            {
+                std::cerr << "Must be less then 10 and more then -10" << std::endl;
+                return 1;
+            }
         }
         catch (const std::exception& e) 
         {
