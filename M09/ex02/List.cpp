@@ -72,7 +72,7 @@ void PmergeMe::insertBintoAList()
 
         for (int i = inserted; i < endIdx && itB != Blist.end(); i++)
         {
-            auto itA = sortedA.begin();
+            auto itA = sortedA.begin();/// because for list need manual iteraion 
             while (itA != sortedA.end() && *itA < *itB)// if B is bigger then A move to next element
                                                         // if B is smaller stop moving insert B in A
                 ++itA;
@@ -83,8 +83,8 @@ void PmergeMe::insertBintoAList()
         insertSize *= 2;
     }
 
-    std::cout << "\nList ";
-    for (int num : sortedA) std::cout << num << " ";
+    // std::cout << "\nList ";
+    // for (int num : sortedA) std::cout << num << " ";
 }
 
 
