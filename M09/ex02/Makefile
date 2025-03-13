@@ -5,7 +5,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp \
 		PmergeMe.cpp \
-		
+		Vector.cpp \
+		List.cpp
 
 		
 	
