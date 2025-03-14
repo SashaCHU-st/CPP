@@ -106,7 +106,7 @@ int BitcoinExchange::validate(std::string datesInput, std::string priceInput)
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Error: bad input" <<'\n';
+        std::cerr << "Error: bad input =>" << priceInput<< '\n';
     }
     return(0);
 
