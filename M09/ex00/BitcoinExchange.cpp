@@ -81,27 +81,33 @@ int BitcoinExchange::validate(std::string datesInput, std::string priceInput)
     std::string month = datesInput.substr(5, 2);
     std::string date = datesInput.substr(8, 2);
 
-    int yearInt = stoi(year);
-    int monthInt= stoi(month);
-    int dateInt = stoi(date);
-
-    double priceInputDouble = stod(priceInput);
-    if(validateDates(yearInt, monthInt, dateInt) == 1)
+    try
     {
-        return (1);
-    }
-    if(validatePrice(priceInputDouble) == 1)
-        return(1);
-    auto it = rates.lower_bound(datesInput);/// return iterator greater or equal to datesInput
-    if (it == rates.end() || it->first != datesInput)
-    {
-        if (it == rates.begin())
-            return 1;
-        --it;
-    }
-    datesInput.erase(std::remove(datesInput.begin(), datesInput.end(), ' '), datesInput.end());
+        int yearInt = stoi(year);
+        int monthInt= stoi(month);
+        int dateInt = stoi(date);
+        double priceInputDouble = stod(priceInput);
+        if(validateDates(yearInt, monthInt, dateInt) == 1)
+        {
+            return (1);
+        }
+        if(validatePrice(priceInputDouble) == 1)
+            return(1);
+        auto it = rates.lower_bound(datesInput);/// return iterator greater or equal to datesInput
+        if (it == rates.end() || it->first != datesInput)
+        {
+            if (it == rates.begin())
+                return 1;
+            --it;
+        }
+        datesInput.erase(std::remove(datesInput.begin(), datesInput.end(), ' '), datesInput.end());
 
-    std::cout << datesInput << " => " << priceInputDouble << " = " << it->second * priceInputDouble << std::endl;
+        std::cout << datesInput << " => " << priceInputDouble << " = " << it->second * priceInputDouble << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "Error: bad input" <<'\n';
+    }
     return(0);
 
 }
