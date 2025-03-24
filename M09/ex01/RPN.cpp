@@ -17,18 +17,14 @@ int RPN::polishCalculation(std::string argument)
 
     while (ss >> token) // read separated whitespace word/token
     {
-        //         if (isdigit(token[0])) // beacuse we want only from 1-9,niot 12
-//         {
-//             polishNumbers.push(std::stoi(token));
-//         }
         try 
         {
             int num = std::stoi(token);
-            if (num < 10 && num > -10) // Only allow numbers less than 10
+            if (num < 10 && num >=0) // Only allow numbers less than 10
                 polishNumbers.push(num);
             else
             {
-                std::cerr << "Must be less then 10 and more then -10" << std::endl;
+                std::cerr << "Must be between less then 10 and more then 0(included)" << std::endl;
                 return 1;
             }
         }
