@@ -40,4 +40,7 @@ class PmergeMe
     void insertBintoAList();
     int forList(int argc, char **argv);
     void pairList(int argc, char **argv);
+
+    //utils
+    int getJacobsthalNbr(int n);
 };

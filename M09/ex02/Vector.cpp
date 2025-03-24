@@ -83,30 +83,69 @@ void PmergeMe::sortBvec()
     // }
 }
 
-void PmergeMe::insertBintoAVec()
-{
-    std::vector<int> sortedA = Avec;
+// void PmergeMe::insertBintoAVec()
+// {
+//     std::vector<int> sortedA = Avec;
 
-    int insertSize = 1;
-    int inserted = 0;
+//     int insertSize = 1;
+//     int inserted = 0;
 
-    while (inserted < static_cast<int>(Bvec.size()))/// until all elements from B => A
-    {
+//     while (inserted < static_cast<int>(Bvec.size()))/// until all elements from B => A
+//     {
 
-        int endIdx = std::min(inserted + insertSize, (int)Bvec.size());// ensure that amount of insertion
-                                                                    //not more then the size of B
-        for (int i = inserted; i < endIdx; i++)
-        {
-            auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[i]);//. ifnd the pos in sortedA 
-                                                                            //where B[i] can be insorted
-            sortedA.insert(pos, Bvec[i]);///position found 
-        }
-        inserted = endIdx;// changing everytime how many have ben inserted,a nd start from this number 
-        insertSize *= 2;
-    }
-    std::cout << "\nAfter ";
-    for (int num : sortedA)
-        std::cout << num << " ";
+//         int endIdx = std::min(inserted + insertSize, (int)Bvec.size());// ensure that amount of insertion
+//                                                                     //not more then the size of B
+//         for (int i = inserted; i < endIdx; i++)
+//         {
+//             auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[i]);//. ifnd the pos in sortedA 
+//                                                                             //where B[i] can be insorted
+//             sortedA.insert(pos, Bvec[i]);///position found 
+//         }
+//         inserted = endIdx;// changing everytime how many have ben inserted,a nd start from this number 
+//         insertSize *= 2;
+//     }
+//     std::cout << "\nAfter ";
+//     for (int num : sortedA)
+//         std::cout << num << " ";
     
 
+// }
+
+void PmergeMe::insertBintoAVec()
+{
+    std::vector<int> sortedA = Avec;  
+    std::vector<int> jacobsthalSequence;  
+    int index = 1;
+    
+
+    ///creating vector assigned with Jacobsthal number
+    while (getJacobsthalNbr(index) < static_cast<int>(Bvec.size()))
+    {
+        jacobsthalSequence.push_back(getJacobsthalNbr(index));
+        index++;
+    }
+
+    jacobsthalSequence.push_back(Bvec.size());/// insures that all inserted elements
+
+    int inserted = 0;
+    for (int i = 0; i < static_cast<int>(jacobsthalSequence.size()); i++)/// while size of jacobsthalSequence
+    {
+        int insertLimit = std::min(jacobsthalSequence[i], static_cast<int>(Bvec.size()));// ensure that amount of insertion
+        //                                                                     //not more then the size of B
+        
+        while (inserted < insertLimit)
+        {
+            auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[inserted]);
+            sortedA.insert(pos, Bvec[inserted]);
+
+            inserted++;
+        }
+        
+    }
+
+    Avec = sortedA;/// copy back to Avec
+    std::cout << "\nAfter Insertion: ";
+    for (int num : Avec)
+        std::cout << num << " ";
+    std::cout << std::endl;
 }
