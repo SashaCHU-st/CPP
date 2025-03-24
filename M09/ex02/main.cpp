@@ -11,14 +11,6 @@ int checkInput(int argc, char **argv)
     for (int i = 1; i < argc; i++)
     {
         std::string arg = argv[i];
-        for (char c : arg)
-        {
-            if (!isdigit(c))
-            {
-                std::cerr << "Wrong input, not a digit: " << arg << std::endl;
-                return 1;
-            }
-        }
         try
         {
             int value = std::stoi(arg);
@@ -32,6 +24,15 @@ int checkInput(int argc, char **argv)
         {
             std::cerr << "Invalid number format: " << arg << std::endl;
             return 1;
+        }
+
+        for (size_t j = 0; j < arg.size(); j++)
+        {
+            if (!isdigit(arg[j]))  
+            {
+                std::cerr << "Wrong input, not a digit: " << arg << std::endl;
+                return 1;
+            }
         }
     }
 
