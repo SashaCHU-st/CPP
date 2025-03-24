@@ -59,54 +59,6 @@ void PmergeMe::sortBlist()
     // }
 }
 
-// int PmergeMe::getJacobsthalNbr(int n)
-// {
-//     if (n == 0) return 0;
-//     if (n == 1) return 1;
-    
-//     int j0 = 0;
-//     int j1 = 1;
-//     int jn = 0;
-    
-//     for (int i = 2; i <= n; i++) {
-//         jn = j1 + 2 * j0;
-//         j0 = j1;
-//         j1 = jn;
-//     }
-    
-//     return jn;
-// }
-
-// void PmergeMe::insertBintoAList()
-// {
-//     std::list<int> sortedA = Alist;
-//     int insertSize = 1;
-//     int inserted = 0;
-
-//     auto itB = Blist.begin();
-//     while (inserted < static_cast<int>(Blist.size()))
-//     {
-//         int endIdx = std::min(inserted + insertSize,(int)Blist.size());
-
-//         for (int i = inserted; i < endIdx && itB != Blist.end(); i++)
-//         {
-//             auto itA = sortedA.begin();/// because for list need manual iteraion 
-//             while (itA != sortedA.end() && *itA < *itB)// if B is bigger then A move to next element
-//                                                         // if B is smaller stop moving insert B in A
-//                 ++itA;
-//             sortedA.insert(itA, *itB);// insert B to A
-//             ++itB;
-//         }
-//         inserted = endIdx;
-//         insertSize *= 2;
-//     }
-
-//     // std::cout << "\nList ";
-//     // for (int num : sortedA) std::cout << num << " ";
-// }
-
-
-
 
 void PmergeMe::insertBintoAList()
 {
@@ -114,6 +66,8 @@ void PmergeMe::insertBintoAList()
     std::vector<int> jacobsthalSequence;  
     int index = 1;
     
+
+    //assigning indexes of Jacob
     while (getJacobsthalNbr(index) < static_cast<int>(Blist.size()))
     {
         jacobsthalSequence.push_back(getJacobsthalNbr(index));
@@ -127,15 +81,13 @@ void PmergeMe::insertBintoAList()
 
     for (int i = 0; i < static_cast<int>(jacobsthalSequence.size()); i++)
     {
-        int insertLimit = std::min(jacobsthalSequence[i], static_cast<int>(Blist.size()));
+        int insertLimit = std::min(jacobsthalSequence[i], static_cast<int>(Blist.size()));/// checking the minimum
         
         while (inserted < insertLimit && itB != Blist.end())
         {
             auto itA = sortedA.begin();
             while (itA != sortedA.end() && *itA < *itB)
-            {
                 ++itA;
-            }
             sortedA.insert(itA, *itB);  
             ++itB;
             inserted++;

@@ -1,6 +1,7 @@
 #include "PmergeMe.hpp"
 
-void PmergeMe::pairVec(int argc, char **argv) {
+void PmergeMe::pairVec(int argc, char **argv)
+{
     if (argc < 2)
     {
         std::cerr << "Less than 2\n";
@@ -11,15 +12,15 @@ void PmergeMe::pairVec(int argc, char **argv) {
     unsigned int number2;
     int amount = argc - 1;
 
-    // std::cout << "!!! " << amount << std::endl;
-
     for (int i = 1; i < amount; i += 2)
     {
-        try {
+        try
+        {
             number1 = std::stoi(argv[i]);
             number2 = std::stoi(argv[i + 1]);
         } 
-        catch (const std::exception &e) {
+        catch (const std::exception &e)
+        {
             std::cerr << "Error: Invalid number format in input!\n";
             return;
         }
@@ -30,8 +31,10 @@ void PmergeMe::pairVec(int argc, char **argv) {
             vecpair.emplace_back(number2, number1);
     }
 
-    if (amount % 2 != 0 && argv[argc - 1]) {
-        try {
+    if (amount % 2 != 0 && argv[argc - 1])
+    {
+        try 
+        {
             odd_number = std::stoi(argv[argc - 1]);
         } catch (const std::exception &e) {
             std::cerr << "Error: Invalid number format for odd element!\n";
@@ -83,33 +86,6 @@ void PmergeMe::sortBvec()
     // }
 }
 
-// void PmergeMe::insertBintoAVec()
-// {
-//     std::vector<int> sortedA = Avec;
-
-//     int insertSize = 1;
-//     int inserted = 0;
-
-//     while (inserted < static_cast<int>(Bvec.size()))/// until all elements from B => A
-//     {
-
-//         int endIdx = std::min(inserted + insertSize, (int)Bvec.size());// ensure that amount of insertion
-//                                                                     //not more then the size of B
-//         for (int i = inserted; i < endIdx; i++)
-//         {
-//             auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[i]);//. ifnd the pos in sortedA 
-//                                                                             //where B[i] can be insorted
-//             sortedA.insert(pos, Bvec[i]);///position found 
-//         }
-//         inserted = endIdx;// changing everytime how many have ben inserted,a nd start from this number 
-//         insertSize *= 2;
-//     }
-//     std::cout << "\nAfter ";
-//     for (int num : sortedA)
-//         std::cout << num << " ";
-    
-
-// }
 
 void PmergeMe::insertBintoAVec()
 {
