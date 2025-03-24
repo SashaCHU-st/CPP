@@ -61,7 +61,7 @@ int BitcoinExchange::validateDates(int yearInt, int monthInt, int dateInt)
     return(0);
 }
 
-int BitcoinExchange::validatePrice(int priceInputDouble)
+int BitcoinExchange::validatePrice(double priceInputDouble)
 {
     if(priceInputDouble < 0.1)
     {

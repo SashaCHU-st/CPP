@@ -16,6 +16,6 @@ class BitcoinExchange
         int inputData(const std::string& inputData);
         int validate(std::string datesInput, std::string priceInput);
         int validateDates(int yearInt, int monthInt, int dateInt);
-        int validatePrice(int priceInputDouble);
+        int validatePrice(double priceInputDouble);
 };
 
