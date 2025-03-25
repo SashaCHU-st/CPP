@@ -7,7 +7,7 @@ SRCS = main.cpp \
 		PmergeMe.cpp \
 		Vector.cpp \
 		List.cpp \
-		utils.cpp 
+		utils.cpp
 
 		
 	

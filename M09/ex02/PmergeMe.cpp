@@ -22,7 +22,7 @@ int PmergeMe::forVector(int argc, char **argv)
 
     assigningVec();// asigning to a and b vectors
 
-    sortBvec();// sorting b
+    sortAvec();//sorting a 
 
     insertBintoAVec();
     auto vecSortEnd = std::chrono::high_resolution_clock::now();
@@ -45,7 +45,7 @@ int PmergeMe::forList(int argc, char **argv)
 
     assigningList();// asigning to a and b list
 
-    sortBlist();// sorting b
+    sortAlist();//sorting a 
 
     insertBintoAList();
     auto listSortEnd = std::chrono::high_resolution_clock::now();

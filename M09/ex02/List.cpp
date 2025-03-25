@@ -15,7 +15,7 @@ void PmergeMe::pairList(int argc, char **argv) {
             std::cerr << "Error: Invalid number format in input!\n";
             return;
         }
-        if (number1 < number2)
+        if (number1 > number2)
             listPair.emplace_back(number1, number2);
         else
             listPair.emplace_back(number2, number1);
@@ -40,51 +40,55 @@ void PmergeMe::assigningList() {
 }
 
 
-void PmergeMe::sortBlist() 
+void PmergeMe::sortAlist() 
 {
-    Blist.sort();
-    // std::cout << " \nSORTED B:";
-    // for (int numbers : Blist)
+    Alist.sort();
+    // std::cout << " \nSORTED A:";
+    // for (int numbers : Alist)
     // {
     //     std::cout << numbers << " ";
     // }
 }
 
 
-void PmergeMe::insertBintoAList()
-{
-    std::list<int> sortedA = Alist;  
-    std::vector<int> jacobsthalSequence;  
-    int index = 1;
-    
+void PmergeMe::insertBintoAList() {
+    std::list<int> sortedA = Alist;
 
-    //assigning indexes of Jacob
-    while (getJacobsthalNbr(index) < static_cast<int>(Blist.size()))
-    {
-        jacobsthalSequence.push_back(getJacobsthalNbr(index));
-        index++;
-    }
-    
-    jacobsthalSequence.push_back(Blist.size());
-
-    auto itB = Blist.begin();
+    int insertSizeIdx = 0;
     int inserted = 0;
 
-    for (int i = 0; i < static_cast<int>(jacobsthalSequence.size()); i++)
+    std::vector<int> jacobsthalSeq = generateJacobsthalSequence(Blist.size());
+
+    auto itB = Blist.begin(); // Iterator for Blist
+
+    while (inserted < static_cast<int>(Blist.size()))
     {
-        int insertLimit = std::min(jacobsthalSequence[i], static_cast<int>(Blist.size()));/// checking the minimum
-        
-        while (inserted < insertLimit && itB != Blist.end())
+        int insertSize = jacobsthalSeq[insertSizeIdx];// Get the current Jacobsthal number for the insertion size
+        int endIdx = std::min(inserted + insertSize, static_cast<int>(Blist.size()));// Ensure we don't insert more than what's left in Blist
+
+        for (int i = inserted; i < endIdx && itB != Blist.end(); ++i) 
         {
-            auto itA = sortedA.begin();
-            while (itA != sortedA.end() && *itA < *itB)/// loops until it will fnd correct pos
+            auto itA = sortedA.begin(); // Iterator for sortedA (Alist)
+            while (itA != sortedA.end() && *itA < *itB)// Move iterator to the correct position in Alist
                 ++itA;
-            sortedA.insert(itA, *itB);  
+            sortedA.insert(itA, *itB);
             ++itB;
-            inserted++;
         }
 
+        inserted = endIdx;
+        insertSizeIdx++;
     }
 
-    Alist = sortedA;
+    // std::cout << "\nAfter list: ";
+    // for (int num : sortedA) {
+    //     std::cout << num << " ";
+    // }
+    // std::cout << std::endl;
 }
+
+
+
+
+
+
+

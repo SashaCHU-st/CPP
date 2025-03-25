@@ -25,7 +25,7 @@ class PmergeMe
     int forVector(int argc, char **argv);
     void pairVec(int argc, char **argv);
     void assigningVec();
-    void sortBvec();
+    void sortAvec();
     void insertBintoAVec();
 
 
@@ -34,11 +34,11 @@ class PmergeMe
     std::list<int> Alist;
     std::list<int> Blist;
     void assigningList();
-    void sortBlist();
+    void sortAlist();
     void insertBintoAList();
     int forList(int argc, char **argv);
     void pairList(int argc, char **argv);
 
-    //utils
-    int getJacobsthalNbr(int n);
+
+    std::vector<int> generateJacobsthalSequence(int n);
 };
