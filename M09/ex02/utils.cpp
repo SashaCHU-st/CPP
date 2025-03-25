@@ -1,11 +1,8 @@
 #include "PmergeMe.hpp"
 
-
 std::vector<int> PmergeMe::generateJacobsthalSequence(int n) 
 {
     std::vector<int> jacobsthalSeq;
-
-    // Handle the base cases
     if (n <= 0) 
         return jacobsthalSeq; // If n is 0 or less, return an empty sequence
     jacobsthalSeq.push_back(0); // First Jacobsthal number, J0
@@ -19,7 +16,8 @@ std::vector<int> PmergeMe::generateJacobsthalSequence(int n)
     int jn = 0; // Current Jacobsthal number
 
     // Generate the sequence up to n-th number
-    for (int i = 2; i < n; ++i) {
+    for (int i = 2; i < n; ++i)
+    {
         jn = j1 + 2 * j0; // Jacobsthal number formula
         jacobsthalSeq.push_back(jn); // Add to the sequence
 
