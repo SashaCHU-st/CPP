@@ -77,7 +77,7 @@ void PmergeMe::insertBintoAList()
         while (inserted < insertLimit && itB != Blist.end())
         {
             auto itA = sortedA.begin();
-            while (itA != sortedA.end() && *itA < *itB)
+            while (itA != sortedA.end() && *itA < *itB)/// loops until it will fnd correct pos
                 ++itA;
             sortedA.insert(itA, *itB);  
             ++itB;
