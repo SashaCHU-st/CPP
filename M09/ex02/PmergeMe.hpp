@@ -25,7 +25,6 @@ class PmergeMe
     int forVector(int argc, char **argv);
     void pairVec(int argc, char **argv);
     void assigningVec();
-    void sortAvec();
     void sortBvec();
     void insertBintoAVec();
 
@@ -35,7 +34,6 @@ class PmergeMe
     std::list<int> Alist;
     std::list<int> Blist;
     void assigningList();
-    void sortAlist();
     void sortBlist();
     void insertBintoAList();
     int forList(int argc, char **argv);

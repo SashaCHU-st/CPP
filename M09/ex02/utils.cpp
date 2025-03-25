@@ -14,9 +14,9 @@ int PmergeMe::getJacobsthalNbr(int n)
     
     for (int i = 2; i <= n; i++) 
     {
-        jn = j1 + 2 * j0;
-        j0 = j1;
-        j1 = jn;
+        jn = j1 + 2 * j0;/// applying formula
+        j0 = j1;           // move to previous ne
+        j1 = jn;        /// move to the currecnt
     }
     
     return jn;

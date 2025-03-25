@@ -42,10 +42,6 @@ void PmergeMe::pairVec(int argc, char **argv)
     }
 }
 
-
-
-
-
 void PmergeMe::assigningVec() {
     for (const auto &pair : vecpair) {
         Avec.push_back(pair.first);
@@ -66,16 +62,6 @@ void PmergeMe::assigningVec() {
 }
 
 
-
-void PmergeMe::sortAvec()
-{
-    std::sort(Avec.begin(), Avec.end());
-    // std::cout << " \n SORTED A:";
-    // for (int numbers : Avec)
-    // {
-    //     std::cout << numbers << " ";
-    // }
-}
 void PmergeMe::sortBvec()
 {
     std::sort(Bvec.begin(), Bvec.end());
@@ -113,7 +99,6 @@ void PmergeMe::insertBintoAVec()
         {
             auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[inserted]);
             sortedA.insert(pos, Bvec[inserted]);
-
             inserted++;
         }
         

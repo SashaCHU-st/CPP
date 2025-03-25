@@ -22,7 +22,6 @@ int PmergeMe::forVector(int argc, char **argv)
 
     assigningVec();// asigning to a and b vectors
 
-    sortAvec();//sorting a 
     sortBvec();// sorting b
 
     insertBintoAVec();
@@ -46,7 +45,6 @@ int PmergeMe::forList(int argc, char **argv)
 
     assigningList();// asigning to a and b list
 
-    sortAlist();//sorting a 
     sortBlist();// sorting b
 
     insertBintoAList();

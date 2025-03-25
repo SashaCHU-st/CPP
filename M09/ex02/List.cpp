@@ -40,15 +40,6 @@ void PmergeMe::assigningList() {
 }
 
 
-void PmergeMe::sortAlist() 
-{
-    Alist.sort();
-    // std::cout << " \nSORTED A:";
-    // for (int numbers : Alist)
-    // {
-    //     std::cout << numbers << " ";
-    // }
-}
 void PmergeMe::sortBlist() 
 {
     Blist.sort();
