@@ -59,17 +59,17 @@ void PmergeMe::insertBintoAList() {
 
     std::vector<int> jacobsthalSeq = generateJacobsthalSequence(Blist.size());
 
-    auto itB = Blist.begin(); // Iterator for Blist
+    auto itB = Blist.begin(); // iterator blist
 
     while (inserted < static_cast<int>(Blist.size()))
     {
-        int insertSize = jacobsthalSeq[insertSizeIdx];// Get the current Jacobsthal number for the insertion size
-        int endIdx = std::min(inserted + insertSize, static_cast<int>(Blist.size()));// Ensure we don't insert more than what's left in Blist
+        int insertSize = jacobsthalSeq[insertSizeIdx];// cur jac number
+        int endIdx = std::min(inserted + insertSize, static_cast<int>(Blist.size()));// nt more then in B list
 
         for (int i = inserted; i < endIdx && itB != Blist.end(); ++i) 
         {
-            auto itA = sortedA.begin(); // Iterator for sortedA (Alist)
-            while (itA != sortedA.end() && *itA < *itB)// Move iterator to the correct position in Alist
+            auto itA = sortedA.begin(); // iterator
+            while (itA != sortedA.end() && *itA < *itB)//checking where to insert
                 ++itA;
             sortedA.insert(itA, *itB);
             ++itB;
@@ -85,10 +85,3 @@ void PmergeMe::insertBintoAList() {
     // }
     // std::cout << std::endl;
 }
-
-
-
-
-
-
-

@@ -85,12 +85,12 @@ void PmergeMe::insertBintoAVec()
 
     while (inserted < static_cast<int>(Bvec.size())) {
         
-        int insertSize = jacobsthalSeq[insertSizeIdx];// Get the current Jacobsthal number for the insertion size
-        int endIdx = std::min(inserted + insertSize, static_cast<int>(Bvec.size()));// Ensure we don't insert more than what's left in Bvec
+        int insertSize = jacobsthalSeq[insertSizeIdx];// cur number
+        int endIdx = std::min(inserted + insertSize, static_cast<int>(Bvec.size()));// check that no more then blist
 
         for (int i = inserted; i < endIdx; i++)
         {
-            auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[i]);// Find position in sortedA to insert
+            auto pos = std::lower_bound(sortedA.begin(), sortedA.end(), Bvec[i]);// find pos where to insert
             sortedA.insert(pos, Bvec[i]);
         }
         inserted = endIdx;
