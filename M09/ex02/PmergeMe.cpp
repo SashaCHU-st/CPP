@@ -26,7 +26,7 @@ int PmergeMe::forVector(int argc, char **argv)
 
     insertBintoAVec();
     auto vecSortEnd = std::chrono::high_resolution_clock::now();
-    vecDuration = std::chrono::duration_cast<std::chrono::microseconds>(vecSortEnd-vecSortStart).count();
+    vecDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(vecSortEnd-vecSortStart).count();
     std::cout << "\nTime to process a range of " << size << " elements with std::vector : " << vecDuration/1000 << "us"<< std::endl;
     return(0);
 
@@ -49,7 +49,7 @@ int PmergeMe::forList(int argc, char **argv)
 
     insertBintoAList();
     auto listSortEnd = std::chrono::high_resolution_clock::now();
-    listDuration = std::chrono::duration_cast<std::chrono::microseconds>(listSortEnd-listSortStart).count();
+    listDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(listSortEnd-listSortStart).count();
     std::cout << "\nTime to process a range of " << size << " elements with std::list : " << listDuration/1000 << "us"<< std::endl;
     return(0);
 
